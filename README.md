@@ -91,9 +91,9 @@ _Use the table below to create your team's timeframes. Given the project is abou
 
 ***Herman:***
 - Strengths: Backend mongoDB, color palettes
--Weaknesses:  testing, some part of frontend functionality
--Opportunities: learning about react calendar package and back-end functionality
--Threats: testing backend endpoints and connecting models and seeds
+- Weaknesses:  testing, some part of frontend functionality
+- Opportunities: learning about react calendar package and back-end functionality
+- Threats: testing backend endpoints and connecting models and seeds
 
 ***Moty:***
 - Strengths: React 
