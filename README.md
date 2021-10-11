@@ -78,27 +78,27 @@ _Use the table below to create your team's timeframes. Given the project is abou
 
 ## SWOT Analysis
 Lynne:
-Strengths: I believe my strongest strength is CSS. It’s something I do enjoy doing and it brings out the creative side in me. Although it still challenges me, it helps me become stronger at it.
-Weaknesses: React and back end in general are my weaknesses. I think it’s something I need to continue practicing and working on. I know I have to put in the extra work to get it but practicing and making mistakes will help me learn. This project will help me do that.
-Opportunities: I have the opportunity to work on a group project with my colleagues. It may not be my first time working in a group but working together on web developing will be a great learning experience and will help me grow to prepare me for the future.
-Threats: I wouldn’t necessarily say having to work in a group is a complete threat but it will definitely be a challenge. Not every one of us have the same methods and possibly won’t agree on everything but we get to learn from each other and that’s more of a benefit than a pain point. Also the back-end side will be the biggest threat to me.
+-Strengths: I believe my strongest strength is CSS. It’s something I do enjoy doing and it brings out the creative side in me. Although it still challenges me, it helps me become stronger at it.
+-Weaknesses: React and back end in general are my weaknesses. I think it’s something I need to continue practicing and working on. I know I have to put in the extra work to get it but practicing and making mistakes will help me learn. This project will help me do that.
+-Opportunities: I have the opportunity to work on a group project with my colleagues. It may not be my first time working in a group but working together on web developing will be a great learning experience and will help me grow to prepare me for the future.
+-Threats: I wouldn’t necessarily say having to work in a group is a complete threat but it will definitely be a challenge. Not every one of us have the same methods and possibly won’t agree on everything but we get to learn from each other and that’s more of a benefit than a pain point. Also the back-end side will be the biggest threat to me.
 
 Kiana: 
-Strengths: React
-Weaknesses: mongoose, testing
-Opportunities: I can use this as an opportunity to get better at backend (mongoDB) and testing. I think this is  agood opportunity to experience coding in a group environment.
-Threats: Working ina group presents new challenges!
+-Strengths: React
+-Weaknesses: mongoose, testing
+-Opportunities: I can use this as an opportunity to get better at backend (mongoDB) and testing. I think this is  agood -opportunity to experience coding in a group environment.
+-Threats: Working ina group presents new challenges!
 
 Herman: 
-Strengths: Backend mongoDB, color palettes
-Weaknesses:  testing, some part of frontend functionality
-Opportunities: learning about react calendar package and back-end functionality
-Threats: testing backend endpoints and connecting models and seeds
+-Strengths: Backend mongoDB, color palettes
+-Weaknesses:  testing, some part of frontend functionality
+-Opportunities: learning about react calendar package and back-end functionality
+-Threats: testing backend endpoints and connecting models and seeds
 
 Moty: 
-Strengths: React 
-Weaknesses: testing
-Opportunities: learning about react calendar package and trying to do testing in this project for the dark mode 
-Threats:  I am a bit behind in assignments (not learning the backend stuff properly)
+-Strengths: React 
+-Weaknesses: testing
+-Opportunities: learning about react calendar package and trying to do testing in this project for the dark mode 
+-Threats:  I am a bit behind in assignments (not learning the backend stuff properly)
 
 
