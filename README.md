@@ -44,8 +44,9 @@ _Please provide a sample of how you intend to build your models. A Schema object
 ```
 
 ## Whimsical
-[Project.pdf](https://github.com/motah-fard/goal-planner/files/7321484/Project.pdf)
-// we have to update this part
+![Project 001](https://user-images.githubusercontent.com/61396761/136770434-2dba82be-a646-4183-9ac5-27cc0a22295f.jpeg)
+
+.jpeg// we have to update this part
 
 
 ## Wireframes
