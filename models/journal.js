@@ -8,7 +8,8 @@ const journalSchema = new Schema(
             type: Schema.Types.ObjectId, 
             ref: "user",
             required: true
-        }
+        },
+        date: { type: Date, default: Date.now}
     },
     {timestamps: true}
     );
