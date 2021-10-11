@@ -6,9 +6,9 @@ const plannerEntries = async() => {
 
     const plannerEntries = [
         {
-            plannerDate: d
-            plannerInput: "Seeding journal entry."
-            userID: " ";
+            plannerDate: d,
+            plannerInput: "Seeding journal entry.",
+            userID: " ",
         }
     ]
 
