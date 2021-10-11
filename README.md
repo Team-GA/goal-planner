@@ -23,6 +23,7 @@ Components
 - Planner entry
 - Passion journal entries
 - Weekly Reflection (5 things that went well this week/proud of)
+
 ***Backend:***
 - Routes
 - Controllers
@@ -40,6 +41,23 @@ Components
 _Please provide a sample of how you intend to build your models. A Schema object for each of your models is ideal._
 
 ```json
+const userSchema = new Schema(
+{
+    first_name: {type: String, required: true},
+    last_name: {type: String, required: true},
+    email: {type: String, required: true},
+    password: {type: String, required: true}
+},
+{timestamps: true}
+);
+
+const plannerEntrySchema = new Schema(
+{
+    journal_date: {type: String, required: true},
+    journal_input: {type: String, required: true}
+},
+{timestamps: true}
+);
 
 ```
 
@@ -99,6 +117,6 @@ _Use the table below to create your team's timeframes. Given the project is abou
 - Strengths: React 
 - Weaknesses: testing
 - Opportunities: learning about react calendar package and trying to do testing in this project for the dark mode 
-- Threats:  I am a bit behind in assignments (not learning the backend stuff properly)
+- Threats:  I am a bit behind in assignments
 
 
