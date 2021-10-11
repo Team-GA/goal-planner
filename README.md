@@ -90,6 +90,7 @@ const plannerEntrySchema = new Schema(
 ![Screen Shot 2021-10-11 at 12 00 03 PM](https://user-images.githubusercontent.com/61396761/136842900-e20d425a-4146-432a-a745-8412d1668b2c.png)
 
 
+![Screen Shot 2021-10-11 at 12 11 57 PM](https://user-images.githubusercontent.com/61396761/136844220-934d655e-e7a5-4e3a-9f86-9aee0f9537a9.png)
 
 
 
@@ -101,14 +102,14 @@ _Use the table below to create your team's timeframes. Given the project is abou
 | --- | :---: |  :---: | :---: | :---: |
 | Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
 | Working on Components | H | 10hrs| 3.5hrs | 3.5hrs |
-| Working on CSS | H | 3hrs| 3.5hrs | 3.5hrs |
-| Adding Models and Schemas | H | 3hrs| 3.5hrs | 3.5hrs |
-| Controllers in Express | H | 3hrs| 2.5hrs | 2.5hrs |
+| Working on CSS | H | 5hrs| 3.5hrs | 3.5hrs |
+| Adding Models and Schemas | H | 5hrs| 3.5hrs | 3.5hrs |
+| Controllers in Express | H | 5hrs| 2.5hrs | 2.5hrs |
 | Making Routes | H | 3hrs| 2.5hrs | 2.5hrs |
-| Connectin to database and the Server | H | 3hrs| 2.5hrs | 2.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Authentication | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Connectin to database and the Server | H | 4hrs| 2.5hrs | 2.5hrs |
+| Working with API | H | 4hrs| 2.5hrs | 2.5hrs |
+| Authentication | H | 4hrs| 2.5hrs | 2.5hrs |
+| Total | H | 48hrs| 5hrs | 5hrs |
 
 
 ## SWOT Analysis
