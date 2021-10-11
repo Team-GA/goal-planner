@@ -10,13 +10,31 @@
 https://docs.google.com/document/d/1ID58Y4BBy5Mw5ht9akaBk46b4YlywzTQItbg_jawixs/edit
 
 ## Project Name and Description
-_Add your project's name and description here._
+Goal planner is an app enables us to plan our todo list and doing it in a weekly calendar. Moreover, the app has an specific page for user to write about her/his passion like a journal. (have to be more specific in this part)
 
 ## MVP Goals
-_List all MVP goals for your application. These are independent of the MVPs required for Project 3._
+***Frontend:*** 
+Components 
+- Navbar
+- Landing page (screens) for login/registration
+- Homepage (screens)
+- Journal Page (screens)
+- Todo list/ Form for todo list
+- Planner entry
+- Passion journal entries
+- Weekly Reflection (5 things that went well this week/proud of)
+***Backend:***
+- Routes
+- Controllers
+- Seed files
+- Models (userSchema, plannerEntrySchema, toDoSchema, journalSchema (these Schemas will reference the user model, rather than having to embed it))
+- Database (passionPlannerDB)
+- Server.js
 
 ## Post-MVP Goals
-_List all MVP goals for your application._
+- Motivational quotes (component using API possibly)
+- Dark mode
+- Notification (email users and remind them)
 
 ## Database Schemas
 _Please provide a sample of how you intend to build your models. A Schema object for each of your models is ideal._
