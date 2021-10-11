@@ -46,15 +46,29 @@ const userSchema = new Schema(
     first_name: {type: String, required: true},
     last_name: {type: String, required: true},
     email: {type: String, required: true},
-    password: {type: String, required: true}
+    password: {type: String, required: true},
+},
+{timestamps: true}
+);
+
+const journalSchema = new Schema(
+{
+    journal_date: {type: String, required: true},
+    journal_input: {type: String, required: true},
+},
+{timestamps: true}
+);
+
+const toDoSchema = new Schema(
+{
+    to_do_list: {type: String(array), required: true},
 },
 {timestamps: true}
 );
 
 const plannerEntrySchema = new Schema(
 {
-    journal_date: {type: String, required: true},
-    journal_input: {type: String, required: true}
+    planner_input: {type: String, required: true},
 },
 {timestamps: true}
 );
