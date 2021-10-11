@@ -94,6 +94,7 @@ const plannerEntrySchema = new Schema(
 <img width="1240" alt="Screen Shot 2021-10-11 at 12 16 01 PM" src="https://user-images.githubusercontent.com/61396761/136844623-c2ed6ca8-6ac8-4aa0-869b-fcdf9f1c9135.png">
 <img width="1157" alt="Screen Shot 2021-10-11 at 12 17 03 PM" src="https://user-images.githubusercontent.com/61396761/136844633-9e942a8a-431e-45c5-b189-89e29d4faae3.png">
 
+![Screen Shot 2021-10-11 at 12 23 17 PM](https://user-images.githubusercontent.com/61396761/136845174-c4b8c1c7-6d9f-4a0b-a69e-11987a91466a.png)
 
 
 
