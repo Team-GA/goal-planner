@@ -87,12 +87,10 @@ const plannerEntrySchema = new Schema(
 
 ## Wireframes
 ![Project 002](https://user-images.githubusercontent.com/61396761/136776110-431958d1-f0af-40ad-81c2-61e7268b4672.jpeg)
+![Screen Shot 2021-10-11 at 11 44 25 AM](https://user-images.githubusercontent.com/61396761/136839612-03e6c52d-4a20-49a3-97d5-db44be1519d9.png)
+![Screen Shot 2021-10-11 at 11 43 58 AM](https://user-images.githubusercontent.com/61396761/136839618-bec37d98-5b67-4e46-967e-7b192f23ce09.png)
 
-![Project 003](https://user-images.githubusercontent.com/61396761/136776122-f66f9f66-0f6f-4bf8-b6c1-dda4692f9d49.jpeg)
-![Project 004](https://user-images.githubusercontent.com/61396761/136776131-213dde4b-2964-4afe-b425-4f3da1975753.jpeg)
-![Project 005](https://user-images.githubusercontent.com/61396761/136776152-056b33fa-aa30-4791-ab69-dd7c178d4b16.jpeg)
-<!-- ![Project 006](https://user-images.githubusercontent.com/61396761/136776165-6a85143f-334c-4d91-ab5f-c423e92d6b4f.jpeg) -->
-![Project 007](https://user-images.githubusercontent.com/61396761/136776173-21ff9c10-cef8-4bae-b986-54c89b929acb.jpeg)
+
 
 ## Timeframes
 _Use the table below to create your team's timeframes. Given the project is about a week long, you can add between 40 hours * group members (i.e. 120 hours for 3 group members)._
