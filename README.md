@@ -70,6 +70,7 @@ const toDoSchema = new Schema(
 
 const plannerEntrySchema = new Schema(
 {
+    plannerDate: {type: Date, required: true},
     plannerInput: {type: String, required: true},
     userID: {type: String, required: true}
 },
