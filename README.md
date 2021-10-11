@@ -43,8 +43,8 @@ _Please provide a sample of how you intend to build your models. A Schema object
 ```json
 const userSchema = new Schema(
 {
-    first_name: {type: String, required: true},
-    last_name: {type: String, required: true},
+    firstName: {type: String, required: true},
+    lastName: {type: String, required: true},
     email: {type: String, required: true},
     password: {type: String, required: true},
 },
@@ -53,22 +53,25 @@ const userSchema = new Schema(
 
 const journalSchema = new Schema(
 {
-    journal_date: {type: String, required: true},
-    journal_input: {type: String, required: true},
+    journalDate: {type: Date, required: true},
+    journalInput: {type: String, required: true},
+    userID: {type: String, required: true}
 },
 {timestamps: true}
 );
 
 const toDoSchema = new Schema(
 {
-    to_do_list: {type: String(array), required: true},
+    toDoList: {type: String, required: true},
+    userID: {type: String, required: true}
 },
 {timestamps: true}
 );
 
 const plannerEntrySchema = new Schema(
 {
-    planner_input: {type: String, required: true},
+    plannerInput: {type: String, required: true},
+    userID: {type: String, required: true}
 },
 {timestamps: true}
 );
