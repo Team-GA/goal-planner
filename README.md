@@ -65,7 +65,14 @@ _Use the table below to create your team's timeframes. Given the project is abou
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
+| Working on Components | H | 10hrs| 3.5hrs | 3.5hrs |
+| Working on CSS | H | 3hrs| 3.5hrs | 3.5hrs |
+| Adding Models and Schemas | H | 3hrs| 3.5hrs | 3.5hrs |
+| Controllers in Express | H | 3hrs| 2.5hrs | 2.5hrs |
+| Making Routes | H | 3hrs| 2.5hrs | 2.5hrs |
+| Connectin to database and the Server | H | 3hrs| 2.5hrs | 2.5hrs |
 | Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
+| Authentication | H | 3hrs| 2.5hrs | 2.5hrs |
 | Total | H | 6hrs| 5hrs | 5hrs |
 
 
