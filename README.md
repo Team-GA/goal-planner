@@ -80,9 +80,7 @@ const plannerEntrySchema = new Schema(
 
 ## Whimsical
 
-![Project 001](https://user-images.githubusercontent.com/61396761/136828659-fe34de07-901a-4165-9cea-30802fd218e2.jpeg)
 
-.jpeg// we have to update this part
 
 
 ## Wireframes
