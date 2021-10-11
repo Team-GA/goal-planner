@@ -80,11 +80,12 @@ const plannerEntrySchema = new Schema(
 
 ## Whimsical
 
+![Project 001](https://user-images.githubusercontent.com/61396761/136839718-053c9fb7-46ba-4eed-b352-7ffc8c77fc4c.jpeg)
 
 
 
 ## Wireframes
-![Project 002](https://user-images.githubusercontent.com/61396761/136776110-431958d1-f0af-40ad-81c2-61e7268b4672.jpeg)
+
 ![Screen Shot 2021-10-11 at 11 44 25 AM](https://user-images.githubusercontent.com/61396761/136839612-03e6c52d-4a20-49a3-97d5-db44be1519d9.png)
 ![Screen Shot 2021-10-11 at 11 43 58 AM](https://user-images.githubusercontent.com/61396761/136839618-bec37d98-5b67-4e46-967e-7b192f23ce09.png)
 
