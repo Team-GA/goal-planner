@@ -86,9 +86,11 @@ const plannerEntrySchema = new Schema(
 
 ## Wireframes
 
-![Screen Shot 2021-10-11 at 11 53 38 AM](https://user-images.githubusercontent.com/61396761/136842569-26ee67cc-6910-4c5a-85c3-b22d0651cb95.png)
+![Screen Shot 2021-10-11 at 11 59 29 AM](https://user-images.githubusercontent.com/61396761/136842827-2b41abbf-cc0f-44d1-b987-74fb4d3122c6.png)
+![Screen Shot 2021-10-11 at 12 00 03 PM](https://user-images.githubusercontent.com/61396761/136842900-e20d425a-4146-432a-a745-8412d1668b2c.png)
 
-![Screen Shot 2021-10-11 at 11 43 58 AM](https://user-images.githubusercontent.com/61396761/136839618-bec37d98-5b67-4e46-967e-7b192f23ce09.png)
+
+
 
 
 
