@@ -89,13 +89,13 @@ _Use the table below to create your team's timeframes. Given the project is abou
 - Opportunities: I can use this as an opportunity to get better at backend (mongoDB) and testing. I think this is  agood -opportunity to experience coding in a group environment.
 - Threats: Working ina group presents new challenges!
 
-***Herman: ***
+***Herman:***
 - Strengths: Backend mongoDB, color palettes
 -Weaknesses:  testing, some part of frontend functionality
 -Opportunities: learning about react calendar package and back-end functionality
 -Threats: testing backend endpoints and connecting models and seeds
 
-***Moty: ***
+***Moty:***
 - Strengths: React 
 - Weaknesses: testing
 - Opportunities: learning about react calendar package and trying to do testing in this project for the dark mode 
