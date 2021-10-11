@@ -7,7 +7,6 @@ Herman
 Group Expectations
 https://docs.google.com/document/d/1ID58Y4BBy5Mw5ht9akaBk46b4YlywzTQItbg_jawixs/edit
 
-Project Name and Description
 Add your project's name and description here.
 
 MVP Goals
@@ -34,3 +33,11 @@ Working with API	H	3hrs	2.5hrs	2.5hrs
 Total	H	6hrs	5hrs	5hrs
 SWOT Analysis
 For each member, add your Strengths, Weaknesses, Opportunities, and Threats
+
+=======
+
+Hi! -kiana
+
+lynne
+
+
