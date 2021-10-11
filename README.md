@@ -44,7 +44,9 @@ _Please provide a sample of how you intend to build your models. A Schema object
 ```
 
 ## Whimsical
-_Please post your application's full stack diagram here as an IMAGE, not as a link._
+[Project.pdf](https://github.com/motah-fard/goal-planner/files/7321484/Project.pdf)
+// we have to update this part
+
 
 ## Wireframes
 _For each screen you intend on showing, provide a wireframe for both desktop and mobile._
