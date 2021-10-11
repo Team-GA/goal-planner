@@ -142,6 +142,3 @@ _Use the table below to create your team's timeframes. Given the project is abou
 - Weaknesses: testing
 - Opportunities: learning about react calendar package and trying to do testing in this project for the dark mode 
 - Threats:  I am a bit behind in assignments
-
-something else
-
