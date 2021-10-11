@@ -1,5 +1,6 @@
 # Project Three
 
+
 ## Members
 -Kiana
 -Lynne
@@ -8,6 +9,7 @@
 
 ## Group Expectations
 https://docs.google.com/document/d/1ID58Y4BBy5Mw5ht9akaBk46b4YlywzTQItbg_jawixs/edit
+
 
 ## Project Name and Description
 Goal Planner - a planner designed to help you achieve your goals, reflect on your week, journal, and more!
@@ -141,4 +143,5 @@ _Use the table below to create your team's timeframes. Given the project is abou
 - Opportunities: learning about react calendar package and trying to do testing in this project for the dark mode 
 - Threats:  I am a bit behind in assignments
 
+something else
 
