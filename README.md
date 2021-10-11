@@ -81,19 +81,23 @@ const plannerEntrySchema = new Schema(
 
 ## Whimsical
 
-![Project 001](https://user-images.githubusercontent.com/61396761/136828659-fe34de07-901a-4165-9cea-30802fd218e2.jpeg)
+![Project 001](https://user-images.githubusercontent.com/61396761/136839718-053c9fb7-46ba-4eed-b352-7ffc8c77fc4c.jpeg)
 
-.jpeg// we have to update this part
 
 
 ## Wireframes
-![Project 002](https://user-images.githubusercontent.com/61396761/136776110-431958d1-f0af-40ad-81c2-61e7268b4672.jpeg)
 
-![Project 003](https://user-images.githubusercontent.com/61396761/136776122-f66f9f66-0f6f-4bf8-b6c1-dda4692f9d49.jpeg)
-![Project 004](https://user-images.githubusercontent.com/61396761/136776131-213dde4b-2964-4afe-b425-4f3da1975753.jpeg)
-![Project 005](https://user-images.githubusercontent.com/61396761/136776152-056b33fa-aa30-4791-ab69-dd7c178d4b16.jpeg)
-<!-- ![Project 006](https://user-images.githubusercontent.com/61396761/136776165-6a85143f-334c-4d91-ab5f-c423e92d6b4f.jpeg) -->
-![Project 007](https://user-images.githubusercontent.com/61396761/136776173-21ff9c10-cef8-4bae-b986-54c89b929acb.jpeg)
+![Screen Shot 2021-10-11 at 11 59 29 AM](https://user-images.githubusercontent.com/61396761/136842827-2b41abbf-cc0f-44d1-b987-74fb4d3122c6.png)
+![Screen Shot 2021-10-11 at 12 00 03 PM](https://user-images.githubusercontent.com/61396761/136842900-e20d425a-4146-432a-a745-8412d1668b2c.png)
+
+
+![Screen Shot 2021-10-11 at 12 11 57 PM](https://user-images.githubusercontent.com/61396761/136844220-934d655e-e7a5-4e3a-9f86-9aee0f9537a9.png)
+<img width="1240" alt="Screen Shot 2021-10-11 at 12 16 01 PM" src="https://user-images.githubusercontent.com/61396761/136844623-c2ed6ca8-6ac8-4aa0-869b-fcdf9f1c9135.png">
+<img width="1157" alt="Screen Shot 2021-10-11 at 12 17 03 PM" src="https://user-images.githubusercontent.com/61396761/136844633-9e942a8a-431e-45c5-b189-89e29d4faae3.png">
+
+![Screen Shot 2021-10-11 at 12 23 17 PM](https://user-images.githubusercontent.com/61396761/136845174-c4b8c1c7-6d9f-4a0b-a69e-11987a91466a.png)
+
+
 
 ## Timeframes
 _Use the table below to create your team's timeframes. Given the project is about a week long, you can add between 40 hours * group members (i.e. 120 hours for 3 group members)._
@@ -102,14 +106,14 @@ _Use the table below to create your team's timeframes. Given the project is abou
 | --- | :---: |  :---: | :---: | :---: |
 | Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
 | Working on Components | H | 10hrs| 3.5hrs | 3.5hrs |
-| Working on CSS | H | 3hrs| 3.5hrs | 3.5hrs |
-| Adding Models and Schemas | H | 3hrs| 3.5hrs | 3.5hrs |
-| Controllers in Express | H | 3hrs| 2.5hrs | 2.5hrs |
+| Working on CSS | H | 5hrs| 3.5hrs | 3.5hrs |
+| Adding Models and Schemas | H | 5hrs| 3.5hrs | 3.5hrs |
+| Controllers in Express | H | 5hrs| 2.5hrs | 2.5hrs |
 | Making Routes | H | 3hrs| 2.5hrs | 2.5hrs |
-| Connectin to database and the Server | H | 3hrs| 2.5hrs | 2.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Authentication | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Connectin to database and the Server | H | 4hrs| 2.5hrs | 2.5hrs |
+| Working with API | H | 4hrs| 2.5hrs | 2.5hrs |
+| Authentication | H | 4hrs| 2.5hrs | 2.5hrs |
+| Total | H | 48hrs| 5hrs | 5hrs |
 
 
 ## SWOT Analysis
