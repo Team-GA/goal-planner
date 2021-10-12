@@ -51,7 +51,7 @@ const findTaskById = async (req, res) => {
 const deleteTask = async (req, res) => {
     try {
         const { id } = req.params;
-        const task = await task.findByIdAndDelete ( id, (err, journal) => {
+        const task = await task.findByIdAndDelete ( id, (err, task) => {
             if (err) {
                 return res.status(500).json({ error: err.message})
             }
