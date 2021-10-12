@@ -9,7 +9,7 @@ const getAllJournals = async (req, res) => {
     }
 }
 
-const createJournals = async (req, res) => {
+const createJournal = async (req, res) => {
     try {
         const journal = new Journal(req.body);
         await journal.save()
@@ -19,7 +19,7 @@ const createJournals = async (req, res) => {
     }
 }
 
-const updateJournals = async (req, res) => {
+const updateJournal = async (req, res) => {
     try {
         const { id } = req.params;
         const journal = await journal.findByIdAndUpdate( id, req.body, { new: true}, (err, journal) => {
@@ -68,8 +68,8 @@ const deleteJournal = async (req, res) => {
 
 module.exports = {
     getAllJournals,
-    createJournals,
-    updateJournals,
+    createJournal,
+    updateJournal,
     findJournalById,
     deleteJournal
   
