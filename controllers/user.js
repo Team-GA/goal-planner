@@ -21,7 +21,7 @@ const register = async (req, res) => {
 const login = async (req, res) => {
     try {
         const [user] = await User.find({username: req.body.username})
-        if (utils.comparePasswords(re.body.password, user.password)){
+        if (utils.comparepasswords(req.body.password, user.password)){
             const userInfo = utils.createUserInfo(user);
             const token = utils.createToken(userInfo)
             return res.status(200).json({ user: userInfo, token })
@@ -35,7 +35,7 @@ const login = async (req, res) => {
 const verifyUser = async (req, res) => {
     try {
         const userInfo = utils.createUserInfo(res.locals.user)
-        return res.status(500).json({ user: userInfo })
+        return res.status(200).json({ user: userInfo })
     } catch (error) {
         res.status(500).json({ message: error.message})
     }
