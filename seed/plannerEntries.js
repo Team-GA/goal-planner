@@ -7,8 +7,8 @@ const plannerEntries = async() => {
     const plannerEntries = [
         {
             plannerDate: d,
-            plannerInput: "Seeding journal entry.",
-            userID: " ",
+            plannerInput: "Seeding planner entry.",
+            userID: null
         }
     ]
 
