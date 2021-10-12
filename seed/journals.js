@@ -1,6 +1,6 @@
 const db = require('../db');
 const Journal = require('../models/journal')
-const User = require("./user")
+const User = require("../models/user")
 
 
 const main = async () => {

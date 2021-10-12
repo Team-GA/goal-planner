@@ -1,5 +1,6 @@
 const db = require("../db");
 const JournalEntry = require("../models/plannerEntry");
+const User = require("../models/user")
 
 const plannerEntries = async() => {
     const kiana = await User.find({ username: "Kiana_123"})
