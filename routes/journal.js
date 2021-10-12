@@ -3,6 +3,8 @@ const journalController = require("../controllers/journal");
 
 const { restrict } = require("../utils")
 
+const journalRouter = new Router()
+
 journalRouter.get("/journal", restrict, journalController.getAllJournals );
 journalRouter.get("/journal/:id", restrict, journalController.findJournalById );
 journalRouter.post("/newJournal", restrict, journalController.createJournal );

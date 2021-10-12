@@ -1,9 +1,12 @@
 const { Router } = require("express");
 const journalRouter = require("./journal");
-const bookRouter = require("./book")
+const taskRouter = require("./toDos")
 const apiRouter = new Router();
 
 apiRouter.use("/auth", userRouter);
-apiRouter.use("/books", bookRouter);
+apiRouter.use("/journal", journalRouter);
+apiRouter.use("/task", taskRouter);
+// apiRouter.use("/books", bookRouter);
+// apiRouter.use("/books", bookRouter);
 
 module.exports = apiRouter;
