@@ -2,19 +2,22 @@ const db = require("../db");
 const ToDo = require("../models/toDo");
 
 const main = async () => {
-    const [ taskUser ] = await User.find({ username: ""})
     const newTasks = [
         {
             task: "Finish all homework assignments",
-            userId: taskUser._id
+            username: "Kiana_123"
         },
         {
             task: "Go to the grocery store to make dinner",
-            userId: taskUser._id
+            username: "Herman_123"
         },
         {
             task: "Buy birthday present for Herman",
-            userId: taskUser._id
+            username: "Lynne_123"
+        },
+        {
+            task: "Buy halloween candy for trick-or-treaters",
+            username: "Moty_123"
         }
     ];
     await ToDo.deleteMany();
@@ -23,8 +26,8 @@ const main = async () => {
 }
 
 const run = async () => {
-    await createTasks();
+    await main();
     db.close()
 }
 
-main();
+run();
