@@ -21,7 +21,7 @@ const createTasks = async (req, res) => {
 const updateTasks = async (req, res) => {
     try {
         const { id } = req.params;
-        const task = await task.findByIdAndUpdate( id, req.body, { new: true }, (err, task) => {
+        const task = await ToDo.findByIdAndUpdate( id, req.body, { new: true }, (err, task) => {
             if (err) {
                 return res.status(500).json({ error: err.message });
             }
@@ -39,7 +39,7 @@ const updateTasks = async (req, res) => {
 const findTaskById = async (req, res) => {
     try {
         const { id } = req.params;
-        const task = await task.findById(id);
+        const task = await ToDo.findById(id);
         if(task) {
             return res.json(201).json(task);
         }
@@ -51,7 +51,7 @@ const findTaskById = async (req, res) => {
 const deleteTask = async (req, res) => {
     try {
         const { id } = req.params;
-        const task = await task.findByIdAndDelete ( id, (err, task) => {
+        const task = await ToDo.findByIdAndDelete ( id, (err, task) => {
             if (err) {
                 return res.status(500).json({ error: err.message})
             }
