@@ -6,7 +6,7 @@ const createUsers = async () => {
     const users = [
         {
             username: "Kiana_123",
-            firstName: "kiana",
+            firstname: "kiana",
             lastname: "chi",
             email: "kiana@smile.co",
             password: hashPassword("pass123")
@@ -14,7 +14,7 @@ const createUsers = async () => {
         },
         {
             username: "Herman_123",
-            firstName: "herman",
+            firstname: "herman",
             lastname: "GA",
             email: "herman@smile.co",
             password: hashPassword("pass234")
@@ -22,7 +22,7 @@ const createUsers = async () => {
         },
         {
             username: "Lynne_123",
-            firstName: "lynne",
+            firstname: "lynne",
             lastname: "GA",
             email: "lynne@smile.co",
             password: hashPassword("pass345")
@@ -30,7 +30,7 @@ const createUsers = async () => {
         },
         {
             username: "Moty_123",
-            firstName: "moty",
+            firstname: "moty",
             lastname: "GA",
             email: "moty@smile.co",
             password: hashPassword("pass456")
