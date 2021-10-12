@@ -22,7 +22,7 @@ const createJournal = async (req, res) => {
 const updateJournal = async (req, res) => {
     try {
         const { id } = req.params;
-        const journal = await journal.findByIdAndUpdate( id, req.body, { new: true}, (err, journal) => {
+        Journal.findByIdAndUpdate( id, req.body, { new: true}, (err, journal) => {
             if (err) {
                 return res.status(500).json({ error: err.message });
               }
@@ -39,7 +39,7 @@ const updateJournal = async (req, res) => {
 const findJournalById = async (req, res) => {
     try {
         const { id } = req.params;
-        const journal = await journal.findById(id);
+        const journal = await Journal.findById(id);
         if(journal) {
             return res.json(201).json(journal);
         }
@@ -51,7 +51,7 @@ const findJournalById = async (req, res) => {
 const deleteJournal = async (req, res) => {
     try {
         const { id } = req.params;
-        const journal = await journal.findByIdAndDelete( id, (err, journal) => {
+        Journal.findByIdAndDelete( id, (err, journal) => {
             if(err) {
                 return res.status(500).json({error: err.message})
             }
