@@ -5,19 +5,19 @@ const main = async () => {
     const newTasks = [
         {
             task: "Finish all homework assignments",
-            username: "Kiana_123"
+            userId: null
         },
         {
             task: "Go to the grocery store to make dinner",
-            username: "Herman_123"
+            userId: null
         },
         {
             task: "Buy birthday present for Herman",
-            username: "Lynne_123"
+            userId: null
         },
         {
             task: "Buy halloween candy for trick-or-treaters",
-            username: "Moty_123"
+            userId: null
         }
     ];
     await ToDo.deleteMany();
