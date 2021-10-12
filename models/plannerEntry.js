@@ -4,7 +4,7 @@ const plannerEntrySchema = new Schema(
     {
         plannerDate: {type: Date, required: true},
         plannerInput: {type: String, required: true},
-        userID: {type: Schema.Types.ObjectId, ref: "User", }
+        userId: {type: Schema.Types.ObjectId, ref: "User", }
     },
     {timestamps: true}
     );

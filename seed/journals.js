@@ -23,7 +23,8 @@ const main = async () => {
         {
             journalDate: 9/1/2021,
             journalInput: "I promised herman i would take him to a place that serves kunafe, i love my countries food but most importantly i love food and a good time.",
-            username:"Moty_123"
+            username:"Moty_123",
+            userId: 
         }
   
     ]

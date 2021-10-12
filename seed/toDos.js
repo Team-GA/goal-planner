@@ -20,7 +20,7 @@ const main = async () => {
             userId: null
         }
     ];
-    await ToDo.deleteMany();
+    // await ToDo.deleteMany();
     await ToDo.insertMany(newTasks);
     console.log("Tasks created!")
 }
