@@ -6,9 +6,9 @@ const userRouter = require("./user")
 const apiRouter = new Router();
 
 apiRouter.use("/auth", userRouter);
-apiRouter.use("/journal", journalRouter);
-apiRouter.use("/task", taskRouter);
-apiRouter.use("/planner", plannerRouter);
-apiRouter.use("/user", userRouter);
+apiRouter.use("/", journalRouter);
+apiRouter.use("/", taskRouter);
+apiRouter.use("/", plannerRouter);
+
 
 module.exports = apiRouter;
