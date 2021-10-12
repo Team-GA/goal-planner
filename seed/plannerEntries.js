@@ -2,13 +2,14 @@ const db = require("../db");
 const JournalEntry = require("../models/plannerEntry");
 
 const plannerEntries = async() => {
+    const kiana = await User.find({ username: "Kiana_123"})
     const d = new Date();
 
     const plannerEntries = [
         {
             plannerDate: d,
             plannerInput: "Seeding planner entry.",
-            userId: null
+            userId: kiana[0]._id
         }
     ]
 
