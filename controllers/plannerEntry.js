@@ -5,7 +5,7 @@ const getAllPlanners = async (req, res) => {
         const planners = await PlannerEntry.find();
         res.json(planners)
     } catch (error) {
-        res.status(500).json({ error: e.message })
+        res.status(500).json({ error: error.message })
     }
 }
 
@@ -25,7 +25,7 @@ const createPlanner = async (req, res) => {
         await planner.save()
         res.status(201).json(planner);
     } catch (error) {
-        res.status(500).json({ error: e.message })
+        res.status(500).json({ error: error.message })
     }
 }
 
@@ -60,7 +60,7 @@ const deletePlanner = async (req, res) => {
 
         })
     } catch (error) {
-        res.status(500).json({ error: e.message })
+        res.status(500).json({ error: error.message })
     }
 }
 
