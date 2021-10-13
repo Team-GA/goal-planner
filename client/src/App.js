@@ -2,7 +2,7 @@ import './App.css';
 import { useEffect, useState } from "react";
 import { Route, Switch, useHistory, useLocation } from 'react-router-dom'
 // import Home from './screens/Home';
-import Home from './screens/Home';
+import Landing from './screens/Landing';
 import Login from './screens/Login';
 import Register from './screens/Register';
 import Nav from './components/Nav';
@@ -31,7 +31,7 @@ function App() {
     <div className="App">
       <Switch>
         <Route path = '/'>
-          <Home />
+          <Landing />
         </Route>  
         <Route path="/login">
           <Login setUser={setUser} />
