@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { loginUser } from "../services";
 import { useHistory } from "react-router";
+import "./Login.css"
 
 const Login = (props) => {
   const [username, setUsername] = useState("");
@@ -21,7 +22,7 @@ const Login = (props) => {
           const user = await loginUser(userInfo);
           // console log the user!
           props.setUser(user);
-          history.push("/")
+          history.push("/home")
           
       } catch (error) {
           console.error(error.message);
