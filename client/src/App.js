@@ -1,5 +1,8 @@
 import './App.css';
 import { Route, Switch } from 'react-router-dom'
+import Home from './screens/Home';
+import Login from './screens/Login';
+import Register from './screens/Register';
 
 function App() {
   return (
@@ -8,25 +11,25 @@ function App() {
     <Switch>
 
       <Route exact path="/">
-        home
+        <Home />
         </Route>
 
-      <Route path>
-        login
+      <Route path="/login">
+        <Login />
+        </Route>
+
+        <Route path="/register">
+        <Register />
         </Route>
 
         <Route>
-        Register
+          Journal
         </Route>
-
         <Route>
         
         </Route>
         <Route>
-        
-        </Route>
-        <Route>
-        
+        Todo list
         </Route>
     </Switch>
     </div>

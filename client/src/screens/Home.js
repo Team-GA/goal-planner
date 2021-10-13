@@ -1,24 +1,11 @@
-// import { useEffect, useState } from "react";
-// import { getAllBooks } from "../services";
-import Book from "../components/Book";
+import React from 'react'
 
-const Home = () => {
-//   const [books, setBooks] = useState([]);
-//   useEffect(() => {
-//     getAllBooks().then((gottenBooks) => setBooks(gottenBooks));
-//   }, []);
-
+function Home() {
   return (
-    <section>
-    <h3>Goal Planner</h3>
     <div>
-        {/* {books.map((book) => (
-            <Book key={book._id} book={book}/>
-        ))} */}
+      <h2>Welcome to Passion Planner</h2>
     </div>
-      
-    </section>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
