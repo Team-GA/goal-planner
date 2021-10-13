@@ -6,7 +6,7 @@ const Home = () => {
     const [plannerEntries, setPlannerEntries] = useState([]);
 
     useEffect(() => {
-        getAllPlannerEntries.then((gotPlannerEntries) => setPlannerEntries(gotPlannerEntries));
+        getAllPlannerEntries().then((gotPlannerEntries) => setPlannerEntries(gotPlannerEntries));
     }, []);
 
     return (
