@@ -1,6 +1,7 @@
 import './App.css';
 import { useEffect, useState } from "react";
-import { Route, Switch, useHistory, useLocation } from 'react-router-dom'
+import { Route, Switch, useHistory, useLocation } from 'react-router-dom';
+import { verifyUser } from './services';
 import Home from './screens/Home';
 import Landing from './screens/Landing';
 import Login from './screens/Login';
@@ -12,24 +13,24 @@ function App() {
   const history = useHistory();
   const location = useLocation();
 
-  // useEffect(() => {
-  //   const verifyUser = async () => {
-  //     const verifiedUser = await verifyUser;
-  //   }
-  //   verifyUser().then((verifiedUser) => setUser(verifiedUser));
-  // }, []);
+  useEffect(() => {
+    verifyUser().then((verifiedUser) => setUser(verifiedUser));
+  }, []);
 
   useEffect(() => {
     if (user && (location.pathname === "/login" || location.pathname === "/register")) {
-      history.push("/");
-    } else if (!user && (location.pathname === "/" || location.pathname === "/new-book")) {
+      history.push("/home");
+    } else if (!user && (location.pathname === "/" || location.pathname === "/home")) {
       history.push("/");
     }
   }, [user, location.pathname, history]);
 
   return (
     <div className="App">
-      <Switch>
+       {/* <Nav /> */}
+
+      {/* <Switch> */}
+        {/* <main> */}
         <Route path = "/">
           <Landing />
         </Route>
@@ -43,12 +44,12 @@ function App() {
         </Route>
 
         <Nav />
-
+ 
         <Route exact path="/home">
           <Home />
         </Route>
 
-        <Route path="add-to-do">
+        <Route path="/add-to-do">
           <h1>This is where we will add to the To-Do List!</h1>
         </Route>
 
@@ -56,15 +57,16 @@ function App() {
           <h1>This is where we will add to the planner!</h1>
         </Route>
 
-        <Route path='new-journal'>
+        <Route path='/new-journal'>
           <h1>This is where we will add new journal entries!</h1>
         </Route>
         
-        <Route path='view-journal-entries'>
+        <Route path='/view-journal-entries'>
           <h1>This is where we will view journal entries!</h1>
         </Route>
-
-      </Switch>
+        {/* </main> */}
+        {/* </Switch> */}
+ 
     </div>
   );
 }
