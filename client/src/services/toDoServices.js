@@ -31,3 +31,27 @@ export const createTask = async (newTask) => {
         console.error(error.message);
     }
 }
+export const getTaskbyId = async (id) => {
+    try {
+        const token = localStorage.getItem("token");
+        if(token){
+            const config = buildHeaders(token);
+            const response = await axios.get(`${apiUrl}/api/auth/task/${id}`, config)
+            return response.data;
+        }
+    } catch (error) {
+        console.error(error.message);
+    }
+}
+export const deleteTask = async (id) => {
+    try {
+        const token = localStorage.getItem("token");
+        if(token){
+            const config = buildHeaders(token);
+            const response = await axios.delete(`${apiUrl}/api/auth/task/${id}`, config)
+            return response.data;
+        }
+    } catch (error) {
+        console.error(error.message);
+    }
+}
