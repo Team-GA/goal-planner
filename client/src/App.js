@@ -29,8 +29,6 @@ function App() {
 
   return (
     <div className="App">
-
-     
       <Switch>
         <Route path="/login">
           <Login setUser={setUser} />
