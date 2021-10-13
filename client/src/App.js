@@ -30,6 +30,9 @@ function App() {
   return (
     <div className="App">
       <Switch>
+        <Route path = '/'>
+          <Home />
+        </Route>  
         <Route path="/login">
           <Login setUser={setUser} />
         </Route>
