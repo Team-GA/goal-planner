@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Home() {
+function Landing() {
   return (
     <div>
       <h2>Welcome to Passion Planner, this is the landing page</h2>
@@ -8,4 +8,4 @@ function Home() {
   )
 }
 
-export default Home
+export default Landing
