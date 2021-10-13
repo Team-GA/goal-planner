@@ -19,7 +19,7 @@ function App() {
 
   useEffect(() => {
     if (user && (location.pathname === "/login" || location.pathname === "/register")) {
-      history.push("/");
+      history.push("/home");
     } else if (!user && (location.pathname === "/" || location.pathname === "/home")) {
       history.push("/");
     }
@@ -27,10 +27,10 @@ function App() {
 
   return (
     <div className="App">
-       <Nav />
+       {/* <Nav /> */}
 
-      <Switch>
-        <main>
+      {/* <Switch> */}
+        {/* <main> */}
         <Route path = "/">
           <Landing />
         </Route>
@@ -42,6 +42,8 @@ function App() {
         <Route path="/register">
           <Register setUser={setUser} />
         </Route>
+
+        <Nav />
  
         <Route exact path="/home">
           <Home />
@@ -62,8 +64,8 @@ function App() {
         <Route path='/view-journal-entries'>
           <h1>This is where we will view journal entries!</h1>
         </Route>
-        </main>
-        </Switch>
+        {/* </main> */}
+        {/* </Switch> */}
  
     </div>
   );
