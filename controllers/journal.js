@@ -5,7 +5,7 @@ const getAllJournals = async (req, res) => {
         const journals = await Journal.find();
         res.json(journals)
     } catch (error) {
-        res.status(500).json({ error: e.message }) 
+        res.status(500).json({ error: error.message }) 
     }
 }
 
@@ -15,7 +15,7 @@ const createJournal = async (req, res) => {
         await journal.save()
         res.status(201).json(journal);
     } catch (error) {
-        res.status(500).json({ error: e.message }) 
+        res.status(500).json({ error: error.message }) 
     }
 }
 
@@ -26,13 +26,13 @@ const updateJournal = async (req, res) => {
             if (err) {
                 return res.status(500).json({ error: err.message });
               }
-              if (!post) {
+              if (!journal) {
                 return res.status(404).json({ message: "journal not found" });
               }
-              res.status(200).json(post);
+              res.status(200).json(journal);
         });
     } catch (error) {
-        res.status(500).json({ error: e.message }) 
+        res.status(500).json({ error: error.message }) 
     }
 }
 
@@ -44,7 +44,7 @@ const findJournalById = async (req, res) => {
             return res.json(201).json(journal);
         }
     } catch (error) {
-        res.status(500).json({ error: e.message }) 
+        res.status(500).json({ error: error.message }) 
     }
 }
 
@@ -62,7 +62,7 @@ const deleteJournal = async (req, res) => {
             
         })
     } catch (error) {
-        res.status(500).json({ error: e.message }) 
+        res.status(500).json({ error: error.message }) 
     }
 }
 

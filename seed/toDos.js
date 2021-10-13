@@ -22,7 +22,7 @@ const main = async () => {
             userId: kiana._id
         }
     ];
-    await ToDo.deleteMany();
+    // await ToDo.deleteMany();
     await ToDo.insertMany(newTasks);
     console.log("Tasks created!")
 }
