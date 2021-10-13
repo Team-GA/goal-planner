@@ -1,7 +1,7 @@
 import './App.css';
 import { useEffect, useState } from "react";
 import { Route, Switch, useHistory, useLocation } from 'react-router-dom'
-// import Home from './screens/Home';
+import Home from './screens/Home';
 import Landing from './screens/Landing';
 import Login from './screens/Login';
 import Register from './screens/Register';
@@ -23,16 +23,17 @@ function App() {
     if (user && (location.pathname === "/login" || location.pathname === "/register")) {
       history.push("/");
     } else if (!user && (location.pathname === "/" || location.pathname === "/new-book")) {
-      history.push("/login");
+      history.push("/");
     }
   }, [user, location.pathname, history]);
 
   return (
     <div className="App">
       <Switch>
-        <Route path = '/'>
+        <Route path = "/">
           <Landing />
-        </Route>  
+        </Route>
+
         <Route path="/login">
           <Login setUser={setUser} />
         </Route>
