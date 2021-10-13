@@ -5,7 +5,7 @@ const User = require("../models/user")
 
 const main = async () => {
 
-    const [ kiana ] = await User.find({ username: "Kiana_123"})
+    const kiana = await User.find({ username: "Kiana_123"})
     const journal = [ 
         {
             journalDate: 10/11/2021,
