@@ -1,11 +1,24 @@
-import React from 'react'
+import { useEffect, useState } from "react";
+import PlannerEntry from "../components/PlannerEntry";
+import { getAllPlannerEntries } from "../services";
 
-function Home() {
+const Home = () => {
+    const [plannerEntries, setPlannerEntries] = useState([]);
+
+    useEffect(() => {
+        getAllPlannerEntries.then((gotPlannerEntries) => setPlannerEntries(gotPlannerEntries));
+    }, []);
+
     return (
-        <div>
-            this is home page after login 
-        </div>
+        <section>
+            <h3>Planner Entries</h3>
+            <div>
+                {plannerEntries.map((plannerEntry) => (
+                    <PlannerEntry key={plannerEntry._id} plannerEntry={plannerEntry} />
+                ))}
+            </div>
+        </section>
     )
 }
 
-export default Home
+export default Home;
