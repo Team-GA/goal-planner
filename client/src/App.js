@@ -1,6 +1,7 @@
 import './App.css';
 import { useEffect, useState } from "react";
 import { Route, Switch, useHistory, useLocation } from 'react-router-dom'
+// import Home from './screens/Home';
 import Home from './screens/Home';
 import Login from './screens/Login';
 import Register from './screens/Register';
@@ -11,12 +12,12 @@ function App() {
   const history = useHistory();
   const location = useLocation();
 
-  useEffect(() => {
-    const verifyUser = async () => {
-      const verifiedUser = await verifyUser;
-    }
-    verifyUser().then((verifiedUser) => setUser(verifiedUser));
-  }, []);
+  // useEffect(() => {
+  //   const verifyUser = async () => {
+  //     const verifiedUser = await verifyUser;
+  //   }
+  //   verifyUser().then((verifiedUser) => setUser(verifiedUser));
+  // }, []);
 
   useEffect(() => {
     if (user && (location.pathname === "/login" || location.pathname === "/register")) {
@@ -28,9 +29,10 @@ function App() {
 
   return (
     <div className="App">
-
-     
       <Switch>
+        <Route path = '/'>
+          <Home />
+        </Route>  
         <Route path="/login">
           <Login setUser={setUser} />
         </Route>
