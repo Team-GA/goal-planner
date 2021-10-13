@@ -20,8 +20,8 @@ function App() {
   useEffect(() => {
     if (user && (location.pathname === "/login" || location.pathname === "/register")) {
       history.push("/home");
-    } else if (!user && (location.pathname === "/" || location.pathname === "/home")) {
-      history.push("/");
+    } else if (!user && (location.pathname === "/home" || location.pathname === "/add-to-planner")) {
+      history.push("/home");
     }
   }, [user, location.pathname, history]);
 
@@ -29,9 +29,9 @@ function App() {
     <div className="App">
        {/* <Nav /> */}
 
-      {/* <Switch> */}
+      <Switch>
         {/* <main> */}
-        <Route path = "/">
+        <Route exact path = "/">
           <Landing />
         </Route>
 
@@ -43,9 +43,10 @@ function App() {
           <Register setUser={setUser} />
         </Route>
 
-        <Nav />
+        {/* <Nav /> */}
  
         <Route exact path="/home">
+        <Nav />
           <Home />
         </Route>
 
@@ -54,18 +55,21 @@ function App() {
         </Route>
 
         <Route path="/add-to-planner">
+        <Nav />
           <h1>This is where we will add to the planner!</h1>
         </Route>
 
         <Route path='/new-journal'>
+        <Nav />
           <h1>This is where we will add new journal entries!</h1>
         </Route>
         
         <Route path='/view-journal-entries'>
+        <Nav/>
           <h1>This is where we will view journal entries!</h1>
         </Route>
         {/* </main> */}
-        {/* </Switch> */}
+        </Switch>
  
     </div>
   );

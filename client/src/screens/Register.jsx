@@ -23,7 +23,7 @@ const Register = (props) => {
           const user = await registerUser(userInfo);
           // console log the user!
           props.setUser(user);
-          history.push("/")
+          history.push("/home")
           
       } catch (error) {
           console.error(error.message);

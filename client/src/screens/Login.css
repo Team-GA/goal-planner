@@ -12,3 +12,10 @@
 body{
     background-color: #e8e8e4;
 }
+
+form {
+    background: skyblue;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
