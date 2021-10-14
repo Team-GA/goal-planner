@@ -11,7 +11,7 @@ const Journal = () => {
 
     return (
     <div>
-        <h2>Journals Entries</h2>
+        <h2>Journal Entries</h2>
             <div>
                 {journalEntries.map((journalEntry) => (
                     <JournalEntry key={journalEntry._id} journalEntry={journalEntry} />

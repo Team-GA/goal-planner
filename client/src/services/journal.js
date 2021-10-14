@@ -19,7 +19,7 @@ export const getAllJournals = async () => {
         const token = localStorage.getItem("token");
         if (token) {
             const config = buildHeaders(token);
-            const response = await axios.get(`${apiURL}/api/journal`, config);
+            const response = await axios.get(`${apiURL}/api/journals`, config);
             return response.data;
         }
     } catch (error) {
