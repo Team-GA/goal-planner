@@ -40,8 +40,11 @@ const findJournalById = async (req, res) => {
     try {
         const { id } = req.params;
         const journal = await Journal.findById(id);
+        // res.json
         if(journal) {
-            return res.json(201).json(journal);
+            return res.status(201).json(journal);
+        } else if (!journal) {
+            res.status(404).json({ error: "journal not found"})
         }
     } catch (error) {
         res.status(500).json({ error: error.message }) 

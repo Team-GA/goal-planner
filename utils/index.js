@@ -14,9 +14,10 @@ const createUserInfo = (user) => {
         id: user._id,
     };
 }
-const createToken = (load) => sign(load, SECRET);
-const comparepasswords = (password, passwordDigest) => compareSync(password, passwordDigest);
+const createToken = (payload) => sign(payload, SECRET);
+const comparePasswords = (password, passwordDigest) => compareSync(password, passwordDigest);
 const hashPassword = (password) => hashSync(password, SALT);
+
 const restrict = async (req, res, next) => {
     try {
         if(!req.headers.authorization) {
@@ -38,7 +39,7 @@ const restrict = async (req, res, next) => {
 module.exports = {
     createToken,
     createUserInfo,
-    comparepasswords,
+    comparePasswords,
     restrict,
     hashPassword
 }

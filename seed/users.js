@@ -17,7 +17,7 @@ const createUsers = async () => {
             firstname: "herman",
             lastname: "GA",
             email: "herman@smile.co",
-            password: hashPassword("pass234")
+            password: hashPassword("pass123")
 
         },
         {
@@ -25,7 +25,7 @@ const createUsers = async () => {
             firstname: "lynne",
             lastname: "GA",
             email: "lynne@smile.co",
-            password: hashPassword("pass345")
+            password: hashPassword("pass123")
 
         },
         {
@@ -33,11 +33,12 @@ const createUsers = async () => {
             firstname: "moty",
             lastname: "GA",
             email: "moty@smile.co",
-            password: hashPassword("pass456")
-
+            password: hashPassword("pass123")
         }
     ];
+    await User.deleteMany()
     await User.insertMany(users);
+    console.log("new user created", users)
 }
 const run = async () => {
     await createUsers();
