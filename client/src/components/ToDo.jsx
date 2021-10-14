@@ -1,12 +1,12 @@
 import {Link} from "react-router-dom"
 
-const ToDo = () => {
-    // const { task } = props.task;
+const ToDo = (props) => {
+    const { task } = props;
     // console.log(task)
 
     return(
         <article>
-            <h3></h3>
+            <h4>{task}</h4>
             <Link to="/add-to-do">
                 <button>create a to do</button>
             </Link>

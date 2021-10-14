@@ -17,7 +17,7 @@ export const getAllTasks = async () => {
         const token = localStorage.getItem("token");
         if (token) {
             const config = buildHeaders(token);
-            const response = await axios.get(`${apiUrl}/api/auth/task`, config)
+            const response = await axios.get(`${apiUrl}/api/task`, config)
             return response.data;
         }
     } catch (error) {
@@ -31,7 +31,7 @@ export const createTask = async (newTask) => {
         const token = localStorage.getItem("token");
         if(token){
             const config = buildHeaders(token);
-            const response = await axios.post(`${apiUrl}/api/auth/newTask`, config)
+            const response = await axios.post(`${apiUrl}/api/newTask`, config)
             return response.data;
         }
     } catch (error) {
@@ -43,7 +43,7 @@ export const getTaskbyId = async (id) => {
         const token = localStorage.getItem("token");
         if(token){
             const config = buildHeaders(token);
-            const response = await axios.get(`${apiUrl}/api/auth/task/${id}`, config)
+            const response = await axios.get(`${apiUrl}/api/task/${id}`, config)
             return response.data;
         }
     } catch (error) {
@@ -55,7 +55,7 @@ export const deleteTask = async (id) => {
         const token = localStorage.getItem("token");
         if(token){
             const config = buildHeaders(token);
-            const response = await axios.delete(`${apiUrl}/api/auth/task/${id}`, config)
+            const response = await axios.delete(`${apiUrl}/api/task/${id}`, config)
             return response.data;
         }
     } catch (error) {
