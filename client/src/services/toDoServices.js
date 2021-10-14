@@ -5,6 +5,13 @@ process.env.NODE_ENV === "development"
     ? "http://localhost:3001"
     : null;
 
+const buildHeaders =(token)=>{
+    return {
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    }
+}
 export const getAllTasks = async () => {
     try {
         const token = localStorage.getItem("token");
