@@ -7,25 +7,26 @@ import Landing from './screens/Landing';
 import Login from './screens/Login';
 import Register from './screens/Register';
 import Nav from './components/Nav'
-import toDo from './components/ToDo'
-import toDoServices from './services/toDoServices'
+// import toDoServices from './services/toDoServices'
+import ToDo from './components/ToDo';
+import CreateToDo from './screens/CreateToDo';
 
 function App() {
   const [user, setUser] = useState(null);
   const history = useHistory();
   const location = useLocation();
 
-  // useEffect(() => {
-  //   verifyUser().then((verifiedUser) => setUser(verifiedUser));
-  // }, []);
+  useEffect(() => {
+    verifyUser().then((verifiedUser) => setUser(verifiedUser));
+  }, []);
 
-  // useEffect(() => {
-  //   if (user && (location.pathname === "/login" || location.pathname === "/register")) {
-  //     history.push("/home");
-  //   } else if (!user && (location.pathname === "/home" || location.pathname === "/add-to-planner")) {
-  //     history.push("/home");
-  //   }
-  // }, [user, location.pathname, history]);
+  useEffect(() => {
+    if (user && (location.pathname === "/login" || location.pathname === "/register")) {
+      history.push("/home");
+    } else if (!user && (location.pathname === "/home" || location.pathname === "/add-to-planner")) {
+      history.push("/home");
+    }
+  }, [user, location.pathname, history]);
 
   return (
     <div className="App">
@@ -45,29 +46,34 @@ function App() {
           <Register setUser={setUser} />
         </Route>
 
-        {/* <Nav /> */}
  
         <Route exact path="/home">
         <Nav />
           <Home />
         </Route>
 
-        <Route path="/add-to-do">
+    {/*To-Do Components */}
+        <Route exact path="/add-to-do">
         <Nav />
-          <toDoServices/>
+          <CreateToDo />
         </Route>
 
-        <Route path="/all-to-do">
+        <Route exact path="/all-to-do">
         <Nav />
-          <toDo/>
-
+          <ToDo />
         </Route>
+      {/*To-Do Components */}
 
+
+        {/*Planner Components */}
         <Route path="/add-to-planner">
         <Nav />
           <h1>This is where we will add to the planner!</h1>
         </Route>
+        {/*Planner Components */}
 
+
+        {/*Journal Components */}
         <Route path='/new-journal'>
         <Nav />
           <h1>This is where we will add new journal entries!</h1>
@@ -77,6 +83,9 @@ function App() {
         <Nav/>
           <h1>This is where we will view journal entries!</h1>
         </Route>
+          {/*Journal Components */}
+
+
         {/* </main> */}
         </Switch>
  

@@ -11,11 +11,10 @@ const Register = (props) => {
 
   const history = useHistory();
 
-  // define an async function to register the user
+
   const handleSubmit = async (e) => {
       try {
           e.preventDefault();
-          // make the userInfo object
           const userInfo = {
             username,
             firstname,
@@ -23,9 +22,8 @@ const Register = (props) => {
             email,
             password,
           };
-          // call registerUser with userInfo as the argument and save the user into a variable
+
           const user = await registerUser(userInfo);
-          // console log the user!
           props.setUser(user);
           history.push("/home")
           

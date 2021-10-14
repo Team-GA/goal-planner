@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useHistory } from "react-router";
 import { createTask } from "../services/toDoServices";
 
-function toDoTaskCreation() {
+function CreateToDo() {
     const [task, setTask] = useState("");
     const [userId, setUserId] = useState("");
     const history = useHistory();
@@ -25,10 +25,10 @@ function toDoTaskCreation() {
             <h4>adding a task</h4>
             <form onSubmit ={handelSubmit}>
                 <label htmlFor="task">task:</label>
-                <input id="task" type="text" value={title} onChange={(e)=>setTask(e.target.value)}></input>
+                <input id="task" type="text" value={task} onChange={(e)=>setTask(e.target.value)}></input>
                 <button type="submit">Submit Task</button>
             </form>
         </section>
     )
 }
-export default toDoTaskCreation;
+export default CreateToDo;
