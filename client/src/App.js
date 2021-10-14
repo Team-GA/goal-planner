@@ -60,6 +60,11 @@ function App() {
           <h1>This is where we will add to the planner!</h1>
         </Route>
 
+        <Route path="/all-to-do">
+        <Nav />
+          <h1>to do component should be moved here</h1>
+        </Route>
+
         <Route path='/new-journal'>
         <Nav />
           <h1>This is where we will add new journal entries!</h1>
