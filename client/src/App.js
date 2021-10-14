@@ -7,6 +7,9 @@ import Landing from './screens/Landing';
 import Login from './screens/Login';
 import Register from './screens/Register';
 import Nav from './components/Nav'
+// import toDoServices from './services/toDoServices'
+import ToDo from './components/ToDo';
+import CreateToDo from './screens/CreateToDo';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -43,23 +46,34 @@ function App() {
           <Register setUser={setUser} />
         </Route>
 
-        {/* <Nav /> */}
  
         <Route exact path="/home">
         <Nav />
           {/* <Home /> */}
         </Route>
 
-        <Route path="/add-to-do">
+    {/*To-Do Components */}
+        <Route exact path="/add-to-do">
         <Nav />
-          <h1>This is where we will add to the To-Do List!</h1>
+          <CreateToDo />
         </Route>
 
+        <Route exact path="/all-to-do">
+        <Nav />
+          <ToDo />
+        </Route>
+      {/*To-Do Components */}
+
+
+        {/*Planner Components */}
         <Route path="/add-to-planner">
         <Nav />
           <h1>This is where we will add to the planner!</h1>
         </Route>
+        {/*Planner Components */}
 
+
+        {/*Journal Components */}
         <Route path='/new-journal'>
         <Nav />
           <h1>This is where we will add new journal entries!</h1>
@@ -69,6 +83,9 @@ function App() {
         <Nav/>
           <h1>This is where we will view journal entries!</h1>
         </Route>
+          {/*Journal Components */}
+
+
         {/* </main> */}
         </Switch>
  

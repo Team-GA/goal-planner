@@ -105,3 +105,29 @@ export const verifyUser = async () => {
 //     }
 // }
 
+// export const getAllTasks = async () => {
+//     try {
+//         const token = localStorage.getItem("token");
+//         if (token) {
+//             const config = buildHeaders(token);
+//             const response = await axios.get(`${apiUrl}/api/task`, config)
+//             return response.data;
+//         }
+//     } catch (error) {
+//         console.error(error.message);
+//     }
+// }
+
+// export const createTask = async (newTask) => {
+    
+//     try {
+//         const token = localStorage.getItem("token");
+//         if(token){
+//             const config = buildHeaders(token);
+//             const response = await axios.post(`${apiUrl}/api/newTask`, config)
+//             return response.data;
+//         }
+//     } catch (error) {
+//         console.error(error.message);
+//     }
+// }
