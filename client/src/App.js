@@ -7,6 +7,7 @@ import Landing from './screens/Landing';
 import Login from './screens/Login';
 import Register from './screens/Register';
 import Nav from './components/Nav'
+import CreatePlannerEntry from "./screens/CreatePlannerEntry"
 // import toDoServices from './services/toDoServices'
 import ToDo from './components/ToDo';
 import CreateToDo from './screens/CreateToDo';
@@ -68,7 +69,7 @@ function App() {
         {/*Planner Components */}
         <Route path="/add-to-planner">
         <Nav />
-        {/* <CreatePlannerEntry /> */}
+        <CreatePlannerEntry />
         </Route>
         {/*Planner Components */}
 
