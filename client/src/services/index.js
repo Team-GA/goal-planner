@@ -50,60 +50,60 @@ export const verifyUser = async () => {
     }
 }
 
-// export const getAllPlannerEntries = async () => {
-//     try {
-//         const token = localStorage.getItem("token");
-//         if (token) {
-//             const config = buildHeaders(token);
-//             const response = await axios.get(`${apiURL}/api/planner-entries`, config);
-//             return response.data;
-//         }
-//         return[];
-//     } catch (error) {
-//         console.error(error.message);
-//     }
-// }
+export const getAllPlannerEntries = async () => {
+    try {
+        const token = localStorage.getItem("token");
+        if (token) {
+            const config = buildHeaders(token);
+            const response = await axios.get(`${apiURL}/api/planner-entries`, config);
+            return response.data;
+        }
+        return[];
+    } catch (error) {
+        console.error(error.message);
+    }
+}
 
 
-// export const createPlannerEntry = async (newPlannerEntry) => {
-//     try {
-//         const token = localStorage.getItem("token");
-//         if (token) {
-//             const config = buildHeaders(token);
-//             const response = await axios.post(`${apiURL}/api/planner-entries`, newPlannerEntry, config);
-//             return response.data;
-//         }
-//     } catch (error) {
-//         console.error(error.message);
-//     }
-// }
+export const createPlannerEntry = async (newPlannerEntry) => {
+    try {
+        const token = localStorage.getItem("token");
+        if (token) {
+            const config = buildHeaders(token);
+            const response = await axios.post(`${apiURL}/api/planner-entries`, newPlannerEntry, config);
+            return response.data;
+        }
+    } catch (error) {
+        console.error(error.message);
+    }
+}
 
-// export const updatePlannerEntry = async (id) => {
-//     try {
-//         const token = localStorage.getItem("token");
-//         if (token) {
-//             const config = buildHeaders(token);
-//             const response = await axios.put(`${apiURL}/api/planner-entries/${id}`, config);
-//             return response.data;
-//         }
-//         return[];
-//     } catch (error) {
-//         console.error(error.message);
-//     }
-// }
+export const updatePlannerEntry = async (id) => {
+    try {
+        const token = localStorage.getItem("token");
+        if (token) {
+            const config = buildHeaders(token);
+            const response = await axios.put(`${apiURL}/api/planner-entries/${id}`, config);
+            return response.data;
+        }
+        return[];
+    } catch (error) {
+        console.error(error.message);
+    }
+}
 
-// export const destoryPlannerEntry = async (id) => {
-//     try {
-//         const token = localStorage.getItem("token");
-//         if (token) {
-//             const config = buildHeaders(token);
-//             const response = await axios.delete(`${apiURL}/api/planner-entries/${id}`, config);
-//             return response.data;
-//         }
-//     } catch (error) {
-//         console.error(error.message);
-//     }
-// }
+export const destoryPlannerEntry = async (id) => {
+    try {
+        const token = localStorage.getItem("token");
+        if (token) {
+            const config = buildHeaders(token);
+            const response = await axios.delete(`${apiURL}/api/planner-entries/${id}`, config);
+            return response.data;
+        }
+    } catch (error) {
+        console.error(error.message);
+    }
+}
 
 // export const getAllTasks = async () => {
 //     try {

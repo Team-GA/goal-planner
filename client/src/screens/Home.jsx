@@ -1,26 +1,26 @@
-// import { useEffect, useState } from "react";
-// import PlannerEntry from "../components/PlannerEntry";
-// import { getAllPlannerEntries } from "../services";
+import { useEffect, useState } from "react";
+import PlannerEntry from "../components/PlannerEntry";
+import { getAllPlannerEntries } from "../services/index";
 
-// const Home = () => {
-//     const [allPlannerEntries, setPlannerEntries] = useState([]);
+const Home = () => {
+    const [allPlannerEntries, setPlannerEntries] = useState([]);
 
-//     useEffect(() => {
-//         console.log(allPlannerEntries)
-//         getAllPlannerEntries().then((gotPlannerEntries) => setPlannerEntries(gotPlannerEntries));
+    useEffect(() => {
+        // console.log(allPlannerEntries)
+        getAllPlannerEntries().then((gotPlannerEntries) => setPlannerEntries(gotPlannerEntries));
 
-//     }, []);
+    }, []);
 
-//     return (
-//         <section>
-//             <h3>Planner Entries</h3>
-//             <div>
-                {/* {plannerEntries.map((plannerEntry) => (
+    return (
+        <section>
+            <h3>Planner Entries</h3>
+            <div>
+                {allPlannerEntries.map((plannerEntry) => (
                     <PlannerEntry key={plannerEntry._id} plannerEntry={plannerEntry} />
-                ))} */}
-            {/* </div>
+                ))}
+            </div>
         </section>
     )
 }
 
-export default Home; */}
+export default Home;

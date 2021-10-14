@@ -2,7 +2,7 @@ import './App.css';
 import { useEffect, useState } from "react";
 import { Route, Switch, useHistory, useLocation } from 'react-router-dom';
 import { verifyUser } from './services';
-// import Home from './screens/Home';
+import Home from './screens/Home';
 import Landing from './screens/Landing';
 import Login from './screens/Login';
 import Register from './screens/Register';
@@ -49,7 +49,7 @@ function App() {
  
         <Route exact path="/home">
         <Nav />
-          {/* <Home /> */}
+          <Home />
         </Route>
 
     {/*To-Do Components */}
@@ -68,7 +68,7 @@ function App() {
         {/*Planner Components */}
         <Route path="/add-to-planner">
         <Nav />
-          <h1>This is where we will add to the planner!</h1>
+        {/* <CreatePlannerEntry /> */}
         </Route>
         {/*Planner Components */}
 
