@@ -7,6 +7,8 @@ import Landing from './screens/Landing';
 import Login from './screens/Login';
 import Register from './screens/Register';
 import Nav from './components/Nav'
+import Journal from './screens/Journal';
+import NewJournal from './screens/NewJournal';
 import CreatePlannerEntry from "./screens/CreatePlannerEntry"
 // import toDoServices from './services/toDoServices'
 import ToDo from './components/ToDo';
@@ -77,12 +79,12 @@ function App() {
         {/*Journal Components */}
         <Route path='/new-journal'>
         <Nav />
-          <h1>This is where we will add new journal entries!</h1>
+          <NewJournal />
         </Route>
         
         <Route path='/view-journal-entries'>
         <Nav/>
-          <h1>This is where we will view journal entries!</h1>
+          <Journal />
         </Route>
           {/*Journal Components */}
 

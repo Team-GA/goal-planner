@@ -26,3 +26,16 @@ export const getAllJournals = async () => {
         console.error(error.message);
     }
 }
+
+export const createJournal = async (newJournal) => {
+    try {
+      const token = localStorage.getItem("token");
+      if (token) {
+        const config = buildHeaders(token);
+        const response = await axios.post(`${apiURL}/api/newJournal`, newJournal, config);
+        return response.data;
+      }
+    } catch (error) {
+      console.error(error.message);
+    }
+  }
