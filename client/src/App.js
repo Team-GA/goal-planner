@@ -13,17 +13,17 @@ function App() {
   const history = useHistory();
   const location = useLocation();
 
-  useEffect(() => {
-    verifyUser().then((verifiedUser) => setUser(verifiedUser));
-  }, []);
+  // useEffect(() => {
+  //   verifyUser().then((verifiedUser) => setUser(verifiedUser));
+  // }, []);
 
-  useEffect(() => {
-    if (user && (location.pathname === "/login" || location.pathname === "/register")) {
-      history.push("/home");
-    } else if (!user && (location.pathname === "/home" || location.pathname === "/add-to-planner")) {
-      history.push("/home");
-    }
-  }, [user, location.pathname, history]);
+  // useEffect(() => {
+  //   if (user && (location.pathname === "/login" || location.pathname === "/register")) {
+  //     history.push("/home");
+  //   } else if (!user && (location.pathname === "/home" || location.pathname === "/add-to-planner")) {
+  //     history.push("/home");
+  //   }
+  // }, [user, location.pathname, history]);
 
   return (
     <div className="App">
