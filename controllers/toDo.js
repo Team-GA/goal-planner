@@ -2,7 +2,9 @@ const ToDo = require("../models/toDo");
 
 const getAllTasks = async (req, res) => {
     try {
-        const tasks = await ToDo.find(); res.json(tasks)
+        const tasks = await ToDo.find();
+        res.json(tasks)
+    
     } catch (error) {
         res.status(500).json({ error: error.message })
     }

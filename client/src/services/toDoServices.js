@@ -20,6 +20,7 @@ export const getAllTasks = async () => {
             const response = await axios.get(`${apiUrl}/api/task`, config)
             return response.data;
         }
+        return [];
     } catch (error) {
         console.error(error.message);
     }
@@ -31,9 +32,10 @@ export const createTask = async (newTask) => {
         const token = localStorage.getItem("token");
         if(token){
             const config = buildHeaders(token);
-            const response = await axios.post(`${apiUrl}/api/newTask`, config)
+            const response = await axios.post(`${apiUrl}/api/newTask`, newTask, config)
             return response.data;
         }
+        
     } catch (error) {
         console.error(error.message);
     }

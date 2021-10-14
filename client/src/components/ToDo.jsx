@@ -6,7 +6,7 @@ const ToDo = (props) => {
 
     return(
         <article>
-            <h4>{task}</h4>
+            <h4>{task.task}</h4>
             <Link to="/add-to-do">
                 <button>create a to do</button>
             </Link>

@@ -11,7 +11,7 @@ import Journal from './screens/Journal';
 import NewJournal from './screens/NewJournal';
 import CreatePlannerEntry from "./screens/CreatePlannerEntry"
 // import toDoServices from './services/toDoServices'
-import ToDo from './components/ToDo';
+import ToDoPage from './components/ToDoPage';
 import CreateToDo from './screens/CreateToDo';
 
 function App() {
@@ -63,7 +63,7 @@ function App() {
 
         <Route exact path="/all-to-do">
         <Nav />
-          <ToDo />
+          <ToDoPage />
         </Route>
       {/*To-Do Components */}
 
