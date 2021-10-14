@@ -1,0 +1,29 @@
+.root {
+    --background--:#e8e8e4;
+    --form--:#ffffff;
+    --primary--:#a8dadc;
+    --secondary--:#fb8500;
+    --user-color--:#52b788;
+    --alert-button--:#e63946;
+    --submitbutton--:#4895ef;
+    --font-color--:#000000;
+}
+
+body{
+    background-color: #e8e8e4;
+    margin: 0 auto;
+}
+.login-section {
+   background: #4895ef; 
+   display: flex;
+   width: 500px;
+   height: 600px;
+   margin: 0 auto;
+   margin-top: 20px;
+}
+
+.login-form {
+    background: skyblue;
+  
+    margin: auto;
+}
