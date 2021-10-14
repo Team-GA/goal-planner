@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import { createPlannerEntry } from "../services";
 
 const CreatePlannerEntry = () => {
-    const [plannerDate, setPlannerDate] = useState(null);
+    const [plannerDate, setPlannerDate] = useState("");
     const [plannerInput, setPlannerInput] = useState("");
     const history = useHistory();
 
@@ -15,7 +15,7 @@ const CreatePlannerEntry = () => {
                 plannerInput,
             }
             await createPlannerEntry(plannerEntry);
-            history.push("/");
+            history.push("/home");
         } catch (error) {
             console.error(error.message)
         }
