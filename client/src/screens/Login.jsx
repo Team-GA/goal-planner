@@ -19,7 +19,7 @@ const Login = (props) => {
             password,
           };
           // call loginUser with userInfo as the argument and save the user into a variable
-          const user = await loginUser(userInfo);
+          const user = await loginUser(userInfo); 
           // console log the user!
           props.setUser(user);
           history.push("/home")
@@ -29,9 +29,9 @@ const Login = (props) => {
       }
   }
     return (
-        <section>
+        <section className="login-section">
         <h3>login to your account!</h3>
-        <form onSubmit={handleSubmit}>
+        <form className="login-form" onSubmit={handleSubmit}>
           <label htmlFor="username">Username: </label>
           <input id="username" type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
 

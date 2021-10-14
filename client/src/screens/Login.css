@@ -11,11 +11,19 @@
 
 body{
     background-color: #e8e8e4;
+    margin: 0 auto;
+}
+.login-section {
+   background: #4895ef; 
+   display: flex;
+   width: 500px;
+   height: 600px;
+   margin: 0 auto;
+   margin-top: 20px;
 }
 
-form {
+.login-form {
     background: skyblue;
-    display: flex;
-    justify-content: center;
+  
     margin: auto;
 }
