@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import PlannerEntry from "../components/PlannerEntry";
 import { getAllPlannerEntries } from "../services/index";
+import { useHistory } from 'react-router';
 
 const Home = () => {
     const [allPlannerEntries, setPlannerEntries] = useState([]);
+    const history = useHistory();
 
     useEffect(() => {
         // console.log(allPlannerEntries)
@@ -11,8 +13,21 @@ const Home = () => {
 
     }, []);
 
+    const logout = async (userInfo) => {
+        try {
+            localStorage.removeItem("token", userInfo)
+            history.push("/")
+            
+        } catch (error) {
+            console.error(error.message); 
+        }
+     }
+
     return (
         <section>
+            <header className="home-header">
+                <button id="logout-btn" onClick={logout}>logout</button>
+            </header>
             <h3>Planner Entries</h3>
             <div>
                 {allPlannerEntries.map((plannerEntry) => (

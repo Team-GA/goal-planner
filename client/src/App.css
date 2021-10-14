@@ -53,3 +53,46 @@ nav {
   justify-content: space-between;
   text-decoration: none;
 }
+
+.landing-header{
+  background: #a8dadc;
+  display: flex;
+  justify-content: space-between;
+}
+
+#landing-btn {
+  background-color: #4895ef;
+  color: #ffffff;
+  border: none;
+  padding: 8px;
+  margin: 5px;
+  border-radius: 10px;
+  width: 100px;
+  height: 35px;
+}
+
+#landing-btn:hover {
+  background-color: #fb8500;
+  color: #000000;
+  border: none;
+  padding: 8px;
+  margin: 5px;
+  border-radius: 10px;
+  width: 110px;
+  height: 39px;
+}
+
+.home-header {
+
+}
+
+#logout-btn {
+    background-color: #e63946;
+    color: #ffffff;
+    border: none;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 10px;
+    width: 100px;
+    height: 35px;
+}
