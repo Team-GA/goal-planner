@@ -22,6 +22,7 @@ export const getAllJournals = async () => {
             const response = await axios.get(`${apiURL}/api/journals`, config);
             return response.data;
         }
+        return [];
     } catch (error) {
         console.error(error.message);
     }
