@@ -7,6 +7,8 @@ import Landing from './screens/Landing';
 import Login from './screens/Login';
 import Register from './screens/Register';
 import Nav from './components/Nav'
+import toDo from './components/ToDo'
+import toDoServices from './services/toDoServices'
 
 function App() {
   const [user, setUser] = useState(null);
@@ -52,17 +54,18 @@ function App() {
 
         <Route path="/add-to-do">
         <Nav />
-          <h1>This is where we will add to the To-Do List!</h1>
+          <toDoServices/>
+        </Route>
+
+        <Route path="/all-to-do">
+        <Nav />
+          <toDo/>
+
         </Route>
 
         <Route path="/add-to-planner">
         <Nav />
           <h1>This is where we will add to the planner!</h1>
-        </Route>
-
-        <Route path="/all-to-do">
-        <Nav />
-          <h1>to do component should be moved here</h1>
         </Route>
 
         <Route path='/new-journal'>
