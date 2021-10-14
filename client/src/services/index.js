@@ -1,4 +1,5 @@
 import axios from 'axios';
+// import { useHistory } from 'react-router';
 
 const apiURL =
   process.env.NODE_ENV === "development"
@@ -9,7 +10,7 @@ const apiURL =
 export const registerUser = async (userInfo) => {
     try {
 
-        const response = await axios.get(`${apiURL}/api/auth/register`, userInfo)
+        const response = await axios.post(`${apiURL}/api/auth/register`, userInfo)
         localStorage.setItem("token", response.data.token);
         return response.data.user;
     } catch (error) {
@@ -20,13 +21,25 @@ export const registerUser = async (userInfo) => {
 export const loginUser = async (userInfo) => {
     try {
 
-        const response = await axios.get(`${apiURL}/api/auth/login`, userInfo)
+        const response = await axios.post(`${apiURL}/api/auth/login`, userInfo)
         localStorage.setItem("token", response.data.token);
         return response.data.user;
     } catch (error) {
         console.error(error.message);
     }
 }
+
+// export const logout = async (userInfo) => {
+//     const history = useHistory();
+//     try {
+//         localStorage.removeItem("token", userInfo)
+//         if(!userInfo) {
+//             history.push("/")
+//         }
+//     } catch (error) {
+//         console.error(error.message); 
+//     }
+//  }
 
 const buildHeaders = (token) => {
     return {
