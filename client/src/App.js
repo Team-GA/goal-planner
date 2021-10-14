@@ -6,7 +6,7 @@ import Home from './screens/Home';
 import Landing from './screens/Landing';
 import Login from './screens/Login';
 import Register from './screens/Register';
-import Nav from './components/Nav';
+import Nav from './components/Nav'
 
 function App() {
   const [user, setUser] = useState(null);
@@ -51,6 +51,7 @@ function App() {
         </Route>
 
         <Route path="/add-to-do">
+        <Nav />
           <h1>This is where we will add to the To-Do List!</h1>
         </Route>
 
