@@ -9,7 +9,7 @@ const apiURL =
 export const registerUser = async (userInfo) => {
     try {
 
-        const response = await axios.get(`${apiURL}/api/auth/register`, userInfo)
+        const response = await axios.post(`${apiURL}/api/auth/register`, userInfo)
         localStorage.setItem("token", response.data.token);
         return response.data.user;
     } catch (error) {
@@ -20,7 +20,7 @@ export const registerUser = async (userInfo) => {
 export const loginUser = async (userInfo) => {
     try {
 
-        const response = await axios.get(`${apiURL}/api/auth/login`, userInfo)
+        const response = await axios.post(`${apiURL}/api/auth/login`, userInfo)
         localStorage.setItem("token", response.data.token);
         return response.data.user;
     } catch (error) {
