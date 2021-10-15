@@ -81,6 +81,10 @@ function App() {
           <Nav user={user} />
           <CreatePlannerEntry />
         </Route>
+
+        <Route path="/edit/id">
+          <Nav />
+          </Route>
         {/*Planner Components */}
 
         {/*Journal Components */}

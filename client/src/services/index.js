@@ -68,6 +68,20 @@ export const getAllPlannerEntries = async () => {
     }
 }
 
+export const getPlannerEntryById = async (id) => {
+    try {
+        const token = localStorage.getItem("token");
+        if (token) {
+            const config = buildHeaders(token);
+            const response = await axios.get(`${apiURL}/api/planner-entries/${id}` , config);
+            return response.data;
+        }
+    } catch (error) {
+        console.error(error.message);
+    }
+}
+
+
 export const createPlannerEntry = async (newPlannerEntry) => {
     try {
         const token = localStorage.getItem("token");
