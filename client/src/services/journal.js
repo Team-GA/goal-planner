@@ -68,3 +68,16 @@ export const deleteJournal = async (id) => {
         console.error(error.message);
     }
 }
+
+export const updateJournal = async (id, journal) => {
+    try {
+        const token = localStorage.getItem("token");
+        if(token){
+            const config = buildHeaders(token);
+            const response = await axios.put(`${apiURL}/api/journal/${id}`,journal,  config)
+            return response.data;
+        }
+    } catch (error) {
+        console.error(error.message);
+    }
+}

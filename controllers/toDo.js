@@ -49,17 +49,28 @@ const findTaskById = async (req, res) => {
 };
 
 const deleteTask = async (req, res) => {
+    console.log("⛔️🥳");
     try {
         const { id } = req.params;
-        const task = await ToDo.findByIdAndDelete ( id, (err, task) => {
-            if (err) {
-                return res.status(500).json({ error: err.message})
+        console.log(id);
+        const task = await ToDo.findByIdAndDelete (
+            id);
+            if (task) {
+                return res.status(200).send(`post id ${id} successfully deleted`)
             }
-            if(!task) {
-                return res.status(404).json({ error: `user task ${id} not found`})
-            }
-            res.status(200).json(`post id ${id} successfully deleted`)
-        })
+            throw new Error(`${id} not found`);
+
+            // id, (err, task) => {
+            // if (err) {
+            //     console.log("😡");
+            //     return res.status(500).json({ error: err.message})
+            // }
+            // if(!task) {
+            //     console.log("😶‍🌫️");
+            //     return res.status(404).json({ error: `user task ${id} not found`})
+            // }
+            // return res.status(200).send(`post id ${id} successfully deleted`)
+        // })
     } catch (error) {
         res.status(500).json({ error: error.message })
     }
