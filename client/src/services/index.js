@@ -73,7 +73,7 @@ export const getPlannerEntryById = async (id) => {
         const token = localStorage.getItem("token");
         if (token) {
             const config = buildHeaders(token);
-            const response = await axios.get(`${apiURL}/api/planner-entries/${id}` , config);
+            const response = await axios.get(`${apiURL}/api/planner-entries/${id}`, config);
             return response.data;
         }
     } catch (error) {

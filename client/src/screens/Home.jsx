@@ -7,6 +7,7 @@ import { useHistory } from 'react-router-dom';
 
 const Home = () => {
     const [allPlannerEntries, setPlannerEntries] = useState([]);
+    const [toggleFetch, setToggleFetch] = useState(false);
     const history = useHistory();
 
     useEffect(() => {
