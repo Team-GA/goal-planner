@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
-import { createJournal } from "../services/journal.js";
+import { createJournal, updateJournal } from "../services/journal.js";
 
 const NewJournal = (props) => {
 
@@ -31,6 +31,7 @@ const NewJournal = (props) => {
                 journalInput
             }
             if(params.id){
+                await updateJournal(params.id,journal);
             } else {
                 await createJournal(journal);
 
