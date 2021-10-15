@@ -1,22 +1,23 @@
 import {Link} from "react-router-dom"
-import { deleteTask } from "../services/toDoServices";
-import { useHistory } from "react-router-dom";
-import { useState } from "react";
+import { deleteTask, getTaskbyId } from "../services/toDoServices";
+import { useEffect, useState } from "react";
 
 const ToDo = (props) => {
-    const [toggleFetch, setToggleFetch] = useState(false);
-    const  task  = props.task;
+    const [toDo, setToDo] = useState({});
     const ID = props.task._id;
-    const history = useHistory();
-    // console.log(task)
+
+    useEffect(() => {
+        getTaskbyId(ID).then((gotToDo) => setToDo(gotToDo))
+    }, [ID]);
+
     const handelDelete = async () => {
         await deleteTask(ID)
-        setToggleFetch((curr) => !curr); 
-        history.push("/all-to-do")
+        props.setToggleFetch((curr) => !curr); 
     }
+
     return(
         <article>
-            <h4>{task.task}</h4>
+            <h4>{toDo.task}</h4>
             <Link to="/add-to-do">
                 <button>create a to do</button>
                 

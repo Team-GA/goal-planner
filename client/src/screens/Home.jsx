@@ -3,8 +3,6 @@ import PlannerEntry from "../components/PlannerEntry";
 import Calendar from '../components/Calendar.jsx';
 import { getAllPlannerEntries } from "../services/index";
 
-
-
 const Home = () => {
     const [allPlannerEntries, setPlannerEntries] = useState([]);
     const [ toggleFetch, setToggleFetch ] = useState(false)
