@@ -1,15 +1,18 @@
 import { useEffect, useState } from "react";
 import PlannerEntry from "../components/PlannerEntry";
+import Calendar from '../Calendar.js';
+import Details from '../Details.js';
 // import Calendar from 'react-calendar';
 import { getAllPlannerEntries } from "../services/index";
 import { useHistory } from 'react-router';
+import "../styles.css";
 
 const Home = () => {
     const [allPlannerEntries, setPlannerEntries] = useState([]);
     const history = useHistory();
-    const [value, onChange] = useState(new Date());
-    const minDate = new Date("10/11/2021");
-    const maxDate = new Date("10/17/2021");
+    const [showDetails, setShowDetails] = useState(false);
+    const [data, setData] = useState(null);
+
 
     useEffect(() => {
         // console.log(allPlannerEntries)
@@ -28,6 +31,10 @@ const Home = () => {
         }
     }
 
+    const showDetailsHandle = (dayStr) => {
+        setData(dayStr);
+        setShowDetails(true);
+      };
     
 
     return (
@@ -40,6 +47,14 @@ const Home = () => {
                 {allPlannerEntries.map((plannerEntry) => (
                     <PlannerEntry key={plannerEntry._id} plannerEntry={plannerEntry} />
                 ))}
+            </div>
+            <div className="App">
+                <h1>Week View Calendar with react</h1>
+                <br />
+                <h2>Example</h2>
+                <Calendar showDetailsHandle={showDetailsHandle} />
+                <br />
+                {showDetails && <Details data={data} />}
             </div>
             {/* <div>
                 <Calendar
