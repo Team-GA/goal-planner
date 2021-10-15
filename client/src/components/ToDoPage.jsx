@@ -11,8 +11,8 @@ function ToDoPage() {
         <div>
             <h4>To do list</h4>
             <div>
-                {tasks.map((task)=>(
-                    <ToDo key={task._id} task={task}/>
+                {tasks.map((toDoTask)=>(
+                    <ToDo key={toDoTask._id} task={toDoTask}/>
                 ))}
             </div>    
         </div>

@@ -40,3 +40,36 @@ export const createJournal = async (newJournal) => {
       console.error(error.message);
     }
   }
+
+
+
+
+
+  //moty
+
+export const getJournalbyId = async (id) => {
+    try {
+        const token = localStorage.getItem("token");
+        if(token){
+            const config = buildHeaders(token);
+            const response = await axios.get(`${apiURL}/api/journal/${id}`, config)
+            return response.data;
+        }
+    } catch (error) {
+        console.error(error.message);
+    }
+}
+
+//moty
+export const deleteJournal = async (id) => {
+    try {
+        const token = localStorage.getItem("token");
+        if(token){
+            const config = buildHeaders(token);
+            const response = await axios.delete(`${apiURL}/api/journal/${id}`, config)
+            return response.data;
+        }
+    } catch (error) {
+        console.error(error.message);
+    }
+}
