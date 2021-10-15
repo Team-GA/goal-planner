@@ -68,7 +68,6 @@ export const getAllPlannerEntries = async () => {
     }
 }
 
-
 export const createPlannerEntry = async (newPlannerEntry) => {
     try {
         const token = localStorage.getItem("token");

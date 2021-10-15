@@ -15,6 +15,7 @@ const Journal = () => {
             <div>
                 {journalEntries.map((journalEntry) => (
                     <JournalEntry key={journalEntry._id} journalEntry={journalEntry} />
+                    
                 ))}
             </div>
     </div>

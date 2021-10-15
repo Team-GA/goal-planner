@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
 import PlannerEntry from "../components/PlannerEntry";
+// import Calendar from 'react-calendar';
 import { getAllPlannerEntries } from "../services/index";
 import { useHistory } from 'react-router';
 
 const Home = () => {
     const [allPlannerEntries, setPlannerEntries] = useState([]);
     const history = useHistory();
+    const [value, onChange] = useState(new Date());
+    const minDate = new Date("10/11/2021");
+    const maxDate = new Date("10/17/2021");
 
     useEffect(() => {
         // console.log(allPlannerEntries)
@@ -19,11 +23,10 @@ const Home = () => {
             localStorage.removeItem("token", userInfo)
             window.localStorage.clear();
             history.push("/Login")
-            
         } catch (error) {
-            console.error(error.message); 
+            console.error(error.message);
         }
-     }
+    }
 
     
 
@@ -33,11 +36,20 @@ const Home = () => {
                 <button id="logout-btn" onClick={logout}>logout</button>
             </header>
             <h3>Planner Entries</h3>
-            <div>
+            <div className="post">
                 {allPlannerEntries.map((plannerEntry) => (
                     <PlannerEntry key={plannerEntry._id} plannerEntry={plannerEntry} />
                 ))}
             </div>
+            {/* <div>
+                <Calendar
+                    onChange={onChange}
+                    value={value}
+                    minDate= {minDate}
+                    maxDate= {maxDate}
+                    showWeekNumbers= {true}
+                />
+            </div> */}
         </section>
     )
 }
