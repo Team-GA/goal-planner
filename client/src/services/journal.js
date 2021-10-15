@@ -43,10 +43,6 @@ export const createJournal = async (newJournal) => {
 
 
 
-
-
-  //moty
-
 export const getJournalbyId = async (id) => {
     try {
         const token = localStorage.getItem("token");
@@ -60,7 +56,6 @@ export const getJournalbyId = async (id) => {
     }
 }
 
-//moty
 export const deleteJournal = async (id) => {
     try {
         const token = localStorage.getItem("token");

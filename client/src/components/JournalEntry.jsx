@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const JournalEntry = (props) => {
-//moty
     const { journalDate, journalInput } = props.journalEntry
     const [toggleFetch, setToggleFetch] = useState(false);
     const history = useHistory();
@@ -15,8 +14,6 @@ const JournalEntry = (props) => {
         setToggleFetch((curr) => !curr);
         history.push("/view-journal-entries")
     }
-    //moty
-
     return (
         <div>
             <h4>{ journalDate }</h4>
