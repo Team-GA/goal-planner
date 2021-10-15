@@ -73,6 +73,10 @@ function App() {
         <Nav />
         <CreatePlannerEntry />
         </Route>
+
+        <Route path="/edit/id">
+          <Nav />
+          </Route>
         {/*Planner Components */}
 
 

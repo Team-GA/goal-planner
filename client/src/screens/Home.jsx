@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import PlannerEntry from "../components/PlannerEntry";
 import { getAllPlannerEntries } from "../services/index";
 import { useHistory } from 'react-router';
-
+import './Home.css'
 const Home = () => {
     const [allPlannerEntries, setPlannerEntries] = useState([]);
     const history = useHistory();
