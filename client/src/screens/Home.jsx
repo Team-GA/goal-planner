@@ -29,7 +29,7 @@ const Home = () => {
                 <button id="logout-btn" onClick={logout}>logout</button>
             </header>
             <h3>Planner Entries</h3>
-            <div>
+            <div className="post">
                 {allPlannerEntries.map((plannerEntry) => (
                     <PlannerEntry key={plannerEntry._id} plannerEntry={plannerEntry} />
                 ))}
