@@ -33,9 +33,9 @@ const PlannerEntry = (props) => {
             <section className="text-entry">
             <h5>{ plannerInput }</h5>
             </section> 
-            <Link to={`/edit/${id}`}>
+            {/* <Link to={`/edit/${id}`}>
                 <button>Edit</button>
-                </Link>
+                </Link> */}
             <button onClick={handleDelete}>Delete</button>
         </article>
     )
