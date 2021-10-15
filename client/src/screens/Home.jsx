@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import PlannerEntry from "../components/PlannerEntry";
-import Calendar from 'react-calendar';
+// import Calendar from 'react-calendar';
 import { getAllPlannerEntries } from "../services/index";
 import { useHistory } from 'react-router';
 
@@ -38,7 +38,7 @@ const Home = () => {
                     <PlannerEntry key={plannerEntry._id} plannerEntry={plannerEntry} />
                 ))}
             </div>
-            <div>
+            {/* <div>
                 <Calendar
                     onChange={onChange}
                     value={value}
@@ -46,7 +46,7 @@ const Home = () => {
                     maxDate= {maxDate}
                     showWeekNumbers= {true}
                 />
-            </div>
+            </div> */}
         </section>
     )
 }
