@@ -1,23 +1,24 @@
-import { useHistory } from "react-router-dom";
-import { deleteJournal } from "../services/journal";
+import { deleteJournal, getJournalbyId } from "../services/journal";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const JournalEntry = (props) => {
-    const { journalDate, journalInput } = props.journalEntry
-    const [toggleFetch, setToggleFetch] = useState(false);
-    const history = useHistory();
+    const [ journal, setJournal ] = useState({});
     const id = props.journalEntry._id;
+
+    useEffect(() => {
+        getJournalbyId(id).then((gotJournalEntry) => setJournal(gotJournalEntry));
+    }, [id])
 
     const handleDelete = async () => {
         await deleteJournal(id);
-        setToggleFetch((curr) => !curr);
-        history.push("/view-journal-entries")
+        props.setToggleFetch((curr) => !curr);
     }
+
     return (
         <div>
-            <h4>{ journalDate }</h4>
-            <h6>{ journalInput }</h6>
+            <h4>{ journal.journalDate }</h4>
+            <h6>{ journal.journalInput }</h6>
             <button onClick={handleDelete}>Delete</button>
             <form>
             <Link to={`/edit-journal/${props.journalEntry._id}`}>

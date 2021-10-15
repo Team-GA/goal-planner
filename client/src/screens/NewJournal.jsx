@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
-import { createJournal, updateJournal } from "../services/journal.js";
+import { createJournal } from "../services/journal.js";
 
 const NewJournal = (props) => {
 
@@ -31,12 +31,11 @@ const NewJournal = (props) => {
                 journalInput
             }
             if(params.id){
-                await updateJournal(params.id,journal);
             } else {
                 await createJournal(journal);
 
             }
-            props.setToggleFetch((curr) => !curr);
+
             history.push("/view-journal-entries");
         } catch (error) {
             console.error(error.message);
