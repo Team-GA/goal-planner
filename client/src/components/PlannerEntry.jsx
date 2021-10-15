@@ -1,28 +1,45 @@
-import { useHistory } from "react-router-dom";
-import { destoryPlannerEntry } from "../services";
-import { useState } from "react";
+import { useHistory, useParams } from "react-router-dom";
+import { destoryPlannerEntry, getPlannerEntryById } from "../services";
+import { useEffect, useState } from "react";
 
 const PlannerEntry = (props) => {
     const { plannerDate, plannerInput } = props.plannerEntry;
-    const [toggleFetch, setToggleFetch] = useState(false);
+    // const [toggleFetch, setToggleFetch] = useState(false);
+    const [entry, setEntry] = useState({});
+    const [date, setDate] = useState("");
+    const [text, setText] = useState("");
     const history = useHistory();
+    const params = useParams();
+    const entryId = params.id;
+
     const id = props.plannerEntry._id;
 
-    // const [entry, setEntry] = useState({});
-    // const [date, setDate] = useState("");
-    // const [text, setText] = useState("");
-    // const params = useParams();
-    // const entryId = params.id;
+    useEffect(() => {
+        getPlannerEntryById(id).then((gotPlannerEntry) => setEntry(gotPlannerEntry));
+    }, [id])
 
     const handleDelete = async () => {
         await destoryPlannerEntry(id);
-        setToggleFetch((curr) => !curr);
-        history.push("/home")
+        props.setToggleFetch((curr) => !curr);
     }
 
-    // const handleUpdate = async () => {
-    //     await updatePlannerEntry(id);
-    //     history.push("/home")
+    // const handleOnSubmit = async (e) => {
+    //     try {
+    //         e.preventDefault();
+
+    //         setDate(date);
+    //         setText(text);
+
+    //         const updateEntry = {
+    //             date,
+    //             text,
+    //         };
+    //         await updatePlannerEntry(updateEntry, id);
+    //         console.log(date, text);
+    //         history.push("/home")
+    //     } catch (error) {
+    //         console.error(error.message);
+    //     }
     // }
 
     return (
