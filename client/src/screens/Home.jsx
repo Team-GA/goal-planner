@@ -1,16 +1,13 @@
 import { useEffect, useState } from "react";
 import PlannerEntry from "../components/PlannerEntry";
-// import Calendar from 'react-calendar';
+import Calendar from '../components/Calendar.jsx';
 import { getAllPlannerEntries } from "../services/index";
 import { useHistory } from 'react-router-dom';
+
 
 const Home = () => {
     const [allPlannerEntries, setPlannerEntries] = useState([]);
     const history = useHistory();
-    const [toggleFetch, setToggleFetch] = useState(false);
-    const [value, onChange] = useState(new Date());
-    const minDate = new Date("10/11/2021");
-    const maxDate = new Date("10/17/2021");
 
     useEffect(() => {
         // console.log(allPlannerEntries)
@@ -18,7 +15,7 @@ const Home = () => {
 
     }, [toggleFetch]);
 
-    const logout = async (e,userInfo) => {
+    const logout = async (e, userInfo) => {
         e.preventDefault();
         try {
             localStorage.removeItem("token", userInfo)
@@ -28,8 +25,6 @@ const Home = () => {
             console.error(error.message);
         }
     }
-
-    
 
     return (
         <section>
@@ -42,15 +37,8 @@ const Home = () => {
                     <PlannerEntry setToggleFetch={setToggleFetch} key={plannerEntry._id} plannerEntry={plannerEntry} />
                 ))}
             </div>
-            {/* <div>
-                <Calendar
-                    onChange={onChange}
-                    value={value}
-                    minDate= {minDate}
-                    maxDate= {maxDate}
-                    showWeekNumbers= {true}
-                />
-            </div> */}
+            <Calendar plannerEntries={allPlannerEntries}/>
+
         </section>
     )
 }
