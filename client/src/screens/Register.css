@@ -74,7 +74,8 @@
     border-radius: 10px;
     padding: 5px;
     box-shadow: 1px 2px 3px rgba(0,0,0,0.9);
-    height: 250px; 
+    height: 470px; 
+    margin-top: -50px;
 }
 
 .reg-form-control {

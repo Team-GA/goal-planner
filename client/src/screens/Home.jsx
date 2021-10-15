@@ -28,9 +28,6 @@ const Home = () => {
 
     return (
         <section>
-            <header className="home-header">
-                <button id="logout-btn" onClick={logout}>logout</button>
-            </header>
             <h3>Planner Entries</h3>
             <div className="post">
                 {allPlannerEntries.map((plannerEntry) => (
