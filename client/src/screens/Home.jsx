@@ -3,7 +3,7 @@ import PlannerEntry from "../components/PlannerEntry";
 // import Calendar from 'react-calendar';
 import { getAllPlannerEntries } from "../services/index";
 import { useHistory } from 'react-router';
-
+import './Home.css'
 const Home = () => {
     const [allPlannerEntries, setPlannerEntries] = useState([]);
     const history = useHistory();

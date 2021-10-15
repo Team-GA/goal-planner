@@ -8,11 +8,22 @@ const PlannerEntry = (props) => {
     const history = useHistory();
     const id = props.plannerEntry._id;
 
+    // const [entry, setEntry] = useState({});
+    // const [date, setDate] = useState("");
+    // const [text, setText] = useState("");
+    // const params = useParams();
+    // const entryId = params.id;
+
     const handleDelete = async () => {
         await destoryPlannerEntry(id);
         setToggleFetch((curr) => !curr);
         history.push("/home")
     }
+
+    // const handleUpdate = async () => {
+    //     await updatePlannerEntry(id);
+    //     history.push("/home")
+    // }
 
     return (
         <article className="entry">
@@ -22,6 +33,9 @@ const PlannerEntry = (props) => {
             <section className="text-entry">
             <h5>{ plannerInput }</h5>
             </section> 
+            <Link to={`/edit/${id}`}>
+                <button>Edit</button>
+                </Link>
             <button onClick={handleDelete}>Delete</button>
         </article>
     )
