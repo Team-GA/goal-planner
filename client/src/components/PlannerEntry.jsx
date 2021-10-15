@@ -1,10 +1,26 @@
+import { useHistory } from "react-router-dom";
+import { destoryPlannerEntry } from "../services";
+
 const PlannerEntry = (props) => {
-    const { plannerDate, plannerInput } = props.plannerEntry
+    const { plannerDate, plannerInput } = props.plannerEntry;
+
+    const history = useHistory();
+    const id = props.plannerEntry._id;
+
+    const handleDelete = async () => {
+        await destoryPlannerEntry(id);
+        history.push("/home")
+    }
+
     return (
-        <article>
+        <article className="entry">
+            <section className="date">
             <h4>{ plannerDate }</h4>
-            <h6>{ plannerInput }</h6>
-            <h3>Thus is the PlannerEntry</h3>
+            </section>
+            <section className="text-entry">
+            <h5>{ plannerInput }</h5>
+            </section> 
+            <button onClick={handleDelete}>Delete</button>
         </article>
     )
 }
