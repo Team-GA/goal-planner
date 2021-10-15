@@ -1,17 +1,17 @@
-import './App.css';
+import "./App.css";
 import { useEffect, useState } from "react";
-import { Route, Switch, useHistory, useLocation } from 'react-router-dom';
-import { verifyUser } from './services';
-import Home from './screens/Home';
-import Landing from './screens/Landing';
-import Login from './screens/Login';
-import Register from './screens/Register';
-import Nav from './components/Nav'
-import Journal from './screens/Journal';
-import NewJournal from './screens/NewJournal';
-import CreatePlannerEntry from "./screens/CreatePlannerEntry"
-import ToDoPage from './components/ToDoPage';
-import CreateToDo from './screens/CreateToDo';
+import { Route, Switch, useHistory, useLocation } from "react-router-dom";
+import { verifyUser } from "./services";
+import Home from "./screens/Home";
+import Landing from "./screens/Landing";
+import Login from "./screens/Login";
+import Register from "./screens/Register";
+import Nav from "./components/Nav";
+import Journal from "./screens/Journal";
+import NewJournal from "./screens/NewJournal";
+import CreatePlannerEntry from "./screens/CreatePlannerEntry";
+import ToDoPage from "./components/ToDoPage";
+import CreateToDo from "./screens/CreateToDo";
 import { getAllJournals } from "./services/journal";
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
   const [journalEntries, setJournalEntries] = useState([]);
   const [toggleFetch, setToggleFetch] = useState(false);
   useEffect(() => {
-      getAllJournals().then((gotJournals) => setJournalEntries(gotJournals));
+    getAllJournals().then((gotJournals) => setJournalEntries(gotJournals));
   }, []);
 
   useEffect(() => {
@@ -29,20 +29,25 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (user && (location.pathname === "/login" || location.pathname === "/register")) {
+    if (
+      user &&
+      (location.pathname === "/login" || location.pathname === "/register")
+    ) {
       history.push("/home");
-    } else if (!user && (location.pathname === "/home" || location.pathname === "/add-to-planner")) {
+    } else if (
+      !user &&
+      (location.pathname === "/home" || location.pathname === "/add-to-planner")
+    ) {
       history.push("/home");
     }
   }, [user, location.pathname, history]);
 
   return (
     <div className="App">
-       {/* <Nav /> */}
-
       <Switch>
         {/* <main> */}
-        <Route exact path = "/">
+        <Route exact path="/">
+          <Nav user={user} />
           <Landing />
         </Route>
 
@@ -54,29 +59,27 @@ function App() {
           <Register setUser={setUser} />
         </Route>
 
- 
         <Route exact path="/home">
-        <Nav />
-          <Home />
+        <Nav user={user} />
+          <Home setUser={setUser} />
         </Route>
 
-    {/*To-Do Components */}
+        {/*To-Do Components */}
         <Route exact path="/add-to-do">
-        <Nav />
+          <Nav user={user} />
           <CreateToDo />
         </Route>
 
         <Route exact path="/all-to-do">
-        <Nav />
+          <Nav user={user} />
           <ToDoPage />
         </Route>
-      {/*To-Do Components */}
-
+        {/*To-Do Components */}
 
         {/*Planner Components */}
         <Route path="/add-to-planner">
-        <Nav />
-        <CreatePlannerEntry />
+          <Nav user={user} />
+          <CreatePlannerEntry />
         </Route>
 
         <Route path="/edit/id">
@@ -84,26 +87,26 @@ function App() {
           </Route>
         {/*Planner Components */}
 
-
         {/*Journal Components */}
-        <Route path='/new-journal'>
-        <Nav />
+        <Route path="/new-journal">
+          <Nav user={user} />
           <NewJournal />
         </Route>
-        
-        <Route path='/view-journal-entries'>
-        <Nav/>
+
+        <Route path="/view-journal-entries">
+          <Nav user={user} />
           <Journal />
         </Route>
         <Route path="/edit-journal/:id">
-          <NewJournal journalEntries={journalEntries} setToggleFetch={setToggleFetch}/>
+          <NewJournal
+            journalEntries={journalEntries}
+            setToggleFetch={setToggleFetch}
+          />
         </Route>
-          {/*Journal Components */}
-
+        {/*Journal Components */}
 
         {/* </main> */}
-        </Switch>
- 
+      </Switch>
     </div>
   );
 }

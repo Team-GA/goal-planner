@@ -6,20 +6,24 @@ const localizer = momentLocalizer(moment)
 
 const MyCalendar = props => {
     //map through planner entries and um change them to shape that calendar expects and save it into variable called "myEventsList"
+    const myEventsList = props.plannerEntries.map((plannerEntry) =>{ 
+        console.log(moment(plannerEntry.plannerDate).toDate());
+        return{
+            'title': plannerEntry.plannerInput,
+            'allDay': false,
+            'start': moment(plannerEntry.plannerDate).toDate(),
+            'end': moment(plannerEntry.plannerDate).add(1, 'h').format(),
+        }
+        
+    });
+    
 
 
     return (
         <div>
             <Calendar
                 localizer={localizer}
-                events={[
-                    {
-                        'title': 'My event',
-                        'allDay': false,
-                        'start': new Date(2018, 0, 1, 10, 0), // 10.00 AM
-                        'end': new Date(2018, 0, 1, 14, 0), // 2.00 PM 
-                    }
-                ]}
+                events={ myEventsList}
                 view='week'
                 
                 startAccessor="start"
