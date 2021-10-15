@@ -19,36 +19,15 @@ const Login = (props) => {
 
   const history = useHistory();
 
-  // const verifyAuth = async (props) => {
-  //   const User = await user.findOne({ 
-  //     username: props.username,
-  //     password: props.password
-  //   })
-  //   .then((User) => {
-      
-  //     if (username === req.body.username){
-  //       return true
-  //     }
-  //     if(password === user.data.password){
-  //       return true
-  //     }
-  //     if(username != user.data.username || password != user.data.password ) {
-  //       res.send("wrong username & password combination!")
-  //       history.push("/login")
-  //     }
-  //   })
-  // }
+  function successLogin() {
+    alert("You are Logged in!!!")
+    history.push("/home")
+  }
 
-//   const getUser = async (userInfo) => {
-//     try {
-//         const response = await axios.get(`${apiURL}/api/auth`, userInfo)
-//         localStorage.getItem("token", response.data.token);
-//         return response.data.user;
-//     } catch (error) {
-//         console.error(error.message);
-//     }
-// }
-// getUser();
+  function failedLogin() {
+    alert("wrong username & password combination")
+    history.push("/Login")
+  }
 
   const handleSubmit = async (e) => {
     try {
@@ -57,12 +36,17 @@ const Login = (props) => {
         username,
         password,
       };
-
-      // verifyAuth();
-
       const user = await loginUser(userInfo);
       props.setUser(user);
-      history.push("/home");
+      if(user) {
+        successLogin();
+      } else {
+        failedLogin();
+      }
+      // history.push("/home");
+      if((userInfo === user) && (userInfo === user)) {
+
+      }
     } catch (error) {
       console.error(error.message);
     }
@@ -71,7 +55,7 @@ const Login = (props) => {
   return (
     <section className="login-section">
 
-      <h3>login to your account!</h3><br/>
+      <h3>login to your account!</h3>
       <div className="form-box">
 
       <form className="login-form" onSubmit={handleSubmit} required >
