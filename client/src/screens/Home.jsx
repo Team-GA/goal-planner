@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 import PlannerEntry from "../components/PlannerEntry";
 import Calendar from '../components/Calendar.jsx';
 import { getAllPlannerEntries } from "../services/index";
-import { useHistory } from 'react-router-dom';
+
 
 
 const Home = () => {
     const [allPlannerEntries, setPlannerEntries] = useState([]);
-    const history = useHistory();
+    const [ toggleFetch, setToggleFetch ] = useState(false)
+
 
     useEffect(() => {
         // console.log(allPlannerEntries)
@@ -15,16 +16,6 @@ const Home = () => {
 
     }, [toggleFetch]);
 
-    const logout = async (e, userInfo) => {
-        e.preventDefault();
-        try {
-            localStorage.removeItem("token", userInfo)
-            window.localStorage.clear();
-            history.push("/Login")
-        } catch (error) {
-            console.error(error.message);
-        }
-    }
 
     return (
         <section>
