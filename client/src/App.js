@@ -10,14 +10,19 @@ import Nav from './components/Nav'
 import Journal from './screens/Journal';
 import NewJournal from './screens/NewJournal';
 import CreatePlannerEntry from "./screens/CreatePlannerEntry"
-// import toDoServices from './services/toDoServices'
 import ToDoPage from './components/ToDoPage';
 import CreateToDo from './screens/CreateToDo';
+import { getAllJournals } from "./services/journal";
 
 function App() {
   const [user, setUser] = useState(null);
   const history = useHistory();
   const location = useLocation();
+  const [journalEntries, setJournalEntries] = useState([]);
+  const [toggleFetch, setToggleFetch] = useState(false);
+  useEffect(() => {
+      getAllJournals().then((gotJournals) => setJournalEntries(gotJournals));
+  }, []);
 
   useEffect(() => {
     verifyUser().then((verifiedUser) => setUser(verifiedUser));
@@ -89,6 +94,9 @@ function App() {
         <Route path='/view-journal-entries'>
         <Nav/>
           <Journal />
+        </Route>
+        <Route path="/edit-journal/:id">
+          <NewJournal journalEntries={journalEntries} setToggleFetch={setToggleFetch}/>
         </Route>
           {/*Journal Components */}
 
