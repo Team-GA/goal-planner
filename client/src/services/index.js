@@ -29,17 +29,8 @@ export const loginUser = async (userInfo) => {
     }
 }
 
-// export const logout = async (userInfo) => {
-//     const history = useHistory();
-//     try {
-//         localStorage.removeItem("token", userInfo)
-//         if(!userInfo) {
-//             history.push("/")
-//         }
-//     } catch (error) {
-//         console.error(error.message); 
-//     }
-//  }
+
+
 
 const buildHeaders = (token) => {
     return {
@@ -72,6 +63,19 @@ export const getAllPlannerEntries = async () => {
             return response.data;
         }
         return[];
+    } catch (error) {
+        console.error(error.message);
+    }
+}
+
+export const getPlannerEntryById = async (id) => {
+    try {
+        const token = localStorage.getItem("token");
+        if (token) {
+            const config = buildHeaders(token);
+            const response = await axios.get(`${apiURL}/api/planner-entries/${id}`);
+            return response.data;
+        }
     } catch (error) {
         console.error(error.message);
     }

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import PlannerEntry from "../components/PlannerEntry";
 import Calendar from '../Calendar.js';
 import Details from '../Details.js';
+// import Calendar from 'react-calendar';
 import { getAllPlannerEntries } from "../services/index";
 import { useHistory } from 'react-router';
 import "../styles.css";
@@ -19,11 +20,12 @@ const Home = () => {
 
     }, []);
 
-    const logout = async (userInfo) => {
+    const logout = async (e,userInfo) => {
+        e.preventDefault();
         try {
             localStorage.removeItem("token", userInfo)
-            history.push("/")
-
+            window.localStorage.clear();
+            history.push("/Login")
         } catch (error) {
             console.error(error.message);
         }
@@ -41,7 +43,7 @@ const Home = () => {
                 <button id="logout-btn" onClick={logout}>logout</button>
             </header>
             <h3>Planner Entries</h3>
-            <div>
+            <div className="post">
                 {allPlannerEntries.map((plannerEntry) => (
                     <PlannerEntry key={plannerEntry._id} plannerEntry={plannerEntry} />
                 ))}
@@ -54,6 +56,15 @@ const Home = () => {
                 <br />
                 {showDetails && <Details data={data} />}
             </div>
+            {/* <div>
+                <Calendar
+                    onChange={onChange}
+                    value={value}
+                    minDate= {minDate}
+                    maxDate= {maxDate}
+                    showWeekNumbers= {true}
+                />
+            </div> */}
         </section>
     )
 }
