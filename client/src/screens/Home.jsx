@@ -17,15 +17,18 @@ const Home = () => {
 
     }, []);
 
-    const logout = async (userInfo) => {
+    const logout = async (e,userInfo) => {
+        e.preventDefault();
         try {
             localStorage.removeItem("token", userInfo)
-            history.push("/")
-
+            window.localStorage.clear();
+            history.push("/Login")
         } catch (error) {
             console.error(error.message);
         }
     }
+
+    
 
     return (
         <section>

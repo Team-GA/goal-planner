@@ -29,17 +29,8 @@ export const loginUser = async (userInfo) => {
     }
 }
 
-// export const logout = async (userInfo) => {
-//     const history = useHistory();
-//     try {
-//         localStorage.removeItem("token", userInfo)
-//         if(!userInfo) {
-//             history.push("/")
-//         }
-//     } catch (error) {
-//         console.error(error.message); 
-//     }
-//  }
+
+
 
 const buildHeaders = (token) => {
     return {
