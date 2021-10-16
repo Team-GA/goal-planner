@@ -1,24 +1,40 @@
-import { useState } from "react";
-import { useHistory } from "react-router-dom";
-import { createPlannerEntry } from "../services";
+import { useState, useEffect } from "react";
+import { useHistory, useParams } from "react-router-dom";
+import { createPlannerEntry, updatePlannerEntry } from "../services";
 
-const CreatePlannerEntry = () => {
+const CreatePlannerEntry = (props) => {
     const [plannerDate, setPlannerDate] = useState("");
     const [plannerInput, setPlannerInput] = useState("");
     const history = useHistory();
-
-    const handleSubmit = async (e) => {
+    const params = useParams();
+    useEffect(() => {
+        if (params.id) {
+          const planner = props.plannerEntries.find(
+            (planner) => planner._id === params.id
+          );
+          if (planner) {
+            setPlannerDate(planner.plannerDate);
+            setPlannerInput(planner.plannerInput);
+          }
+        }
+      }, [params.id, props.plannerEntries]);
+      const handleSubmit = async (e) => {
         try {
             e.preventDefault();
             const plannerEntry = {
                 plannerDate,
                 plannerInput,
             }
-            await createPlannerEntry(plannerEntry);
-            history.push("/home");
-        } catch (error) {
-            console.error(error.message)
-        }
+            if (params.id) {
+                await updatePlannerEntry(params.id, plannerEntry);
+                history.push("/home");
+              } else {
+                await createPlannerEntry(plannerEntry);
+                history.push("/home");
+              }
+            } catch (error) {
+              console.error(error.message);
+            }
     }
 
     return (
