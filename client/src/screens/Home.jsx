@@ -3,6 +3,7 @@ import PlannerEntry from "../components/PlannerEntry";
 import Calendar from '../components/Calendar.jsx';
 import { getAllPlannerEntries } from "../services/index";
 import './Home.css'
+import ToDoPage from "../components/ToDoPage";
 
 const Home = () => {
     const [allPlannerEntries, setPlannerEntries] = useState([]);
@@ -17,7 +18,11 @@ const Home = () => {
 
     return (
         <section>
+            <h4>
+                <ToDoPage/>
+            </h4>
             <h3>Planner Entries</h3>
+
             <div className="post">
                 {allPlannerEntries.map((plannerEntry) => (
                     <PlannerEntry setToggleFetch={setToggleFetch} key={plannerEntry._id} plannerEntry={plannerEntry} />
