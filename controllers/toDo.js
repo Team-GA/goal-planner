@@ -60,17 +60,6 @@ const deleteTask = async (req, res) => {
             }
             throw new Error(`${id} not found`);
 
-            // id, (err, task) => {
-            // if (err) {
-            //     console.log("😡");
-            //     return res.status(500).json({ error: err.message})
-            // }
-            // if(!task) {
-            //     console.log("😶‍🌫️");
-            //     return res.status(404).json({ error: `user task ${id} not found`})
-            // }
-            // return res.status(200).send(`post id ${id} successfully deleted`)
-        // })
     } catch (error) {
         res.status(500).json({ error: error.message })
     }

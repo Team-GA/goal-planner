@@ -13,16 +13,36 @@ import CreatePlannerEntry from "./screens/CreatePlannerEntry";
 import ToDoPage from "./components/ToDoPage";
 import CreateToDo from "./screens/CreateToDo";
 import { getAllJournals } from "./services/journal";
+import { getAllPlannerEntries } from "./services/index";
+import { getAllTasks } from "./services/toDoServices";
 
 function App() {
   const [user, setUser] = useState(null);
   const history = useHistory();
   const location = useLocation();
-  const [journalEntries, setJournalEntries] = useState([]);
-  const [toggleFetch, setToggleFetch] = useState(false);
+  const [journalEntries, setJournalEntries] = useState({});
+  const [tasks, setTasks] = useState({});
+  const [plannerEntries, setPlannerEntries] = useState({});
+
+  // journal props for edit
   useEffect(() => {
     getAllJournals().then((gotJournals) => setJournalEntries(gotJournals));
   }, []);
+  // journal
+
+  //planner props for edit
+  useEffect(() => {
+    getAllPlannerEntries().then((gotPlannerEntries) =>
+      setPlannerEntries(gotPlannerEntries)
+    );
+  }, []);
+  // planner
+
+  // to do props for edit
+  useEffect(() => {
+    getAllTasks().then((gotTheTasks) => setTasks(gotTheTasks));
+  }, []);
+  // to do
 
   useEffect(() => {
     verifyUser().then((verifiedUser) => setUser(verifiedUser));
@@ -60,7 +80,7 @@ function App() {
         </Route>
 
         <Route exact path="/home">
-        <Nav user={user} />
+          <Nav user={user} />
           <Home setUser={setUser} />
         </Route>
 
@@ -74,6 +94,12 @@ function App() {
           <Nav user={user} />
           <ToDoPage />
         </Route>
+
+        <Route path="/edit-to-do/:id">
+          <Nav user={user} />
+          <CreateToDo tasks={tasks} />
+        </Route>
+        
         {/*To-Do Components */}
 
         {/*Planner Components */}
@@ -82,9 +108,10 @@ function App() {
           <CreatePlannerEntry />
         </Route>
 
-        <Route path="/edit/id">
-          <Nav />
-          </Route>
+        <Route path="/edit-planner/:id">
+        <Nav user={user} />
+          <CreatePlannerEntry plannerEntries={plannerEntries}/>
+        </Route>
         {/*Planner Components */}
 
         {/*Journal Components */}
@@ -97,11 +124,10 @@ function App() {
           <Nav user={user} />
           <Journal />
         </Route>
+
         <Route path="/edit-journal/:id">
-          <NewJournal
-            journalEntries={journalEntries}
-            setToggleFetch={setToggleFetch}
-          />
+          <Nav user={user} />
+          <NewJournal journalEntries={journalEntries} />
         </Route>
         {/*Journal Components */}
 
