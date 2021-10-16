@@ -1,21 +1,38 @@
-import { useState } from "react";
-import { useHistory } from "react-router";
-import { createTask } from "../services/toDoServices";
+import { useState, useEffect } from "react";
+import { useHistory, useParams } from "react-router-dom";
+import { createTask, updateTask } from "../services/toDoServices";
 
-function CreateToDo() {
+function CreateToDo(props) {
     const [task, setTask] = useState("");
     const history = useHistory();
+    const params = useParams();
+    useEffect(() => {
+        if (params.id) {
+          const todo = props.tasks.find(
+            (todo) => todo._id === params.id
+          );
+          if (todo) {
+            setTask(todo.task);
+          }
+        }
+      }, [params.id, props.tasks]);
+
     const handelSubmit = async (e) => {
         try {
             e.preventDefault();
             const taskEntry = {
                 task,
             }
-            await createTask(taskEntry);
-            history.push("/all-to-do")
-        } catch (error) {
-            console.log(error.message)
-        }
+            if (params.id) {
+                await updateTask(params.id, taskEntry);
+                history.push("/all-to-do");
+              } else {
+                await createTask(taskEntry);
+                history.push("/all-to-do");
+              }
+            } catch (error) {
+              console.error(error.message);
+            }
     }
     return (
         <section>

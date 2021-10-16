@@ -64,3 +64,19 @@ export const deleteTask = async (id) => {
         console.error(error.message);
     }
 }
+export const updateTask = async (id, task) => {
+    try {
+      const token = localStorage.getItem("token");
+      if (token) {
+        const config = buildHeaders(token);
+        const response = await axios.put(
+          `${apiUrl}/api/task/${id}`,
+          task,
+          config
+        );
+        return response.data;
+      }
+    } catch (error) {
+      console.error(error.message);
+    }
+  };

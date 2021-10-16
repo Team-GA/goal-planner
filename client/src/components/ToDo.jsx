@@ -1,6 +1,7 @@
-import {Link} from "react-router-dom"
+
 import { deleteTask, getTaskbyId } from "../services/toDoServices";
 import { useEffect, useState } from "react";
+import {Link} from "react-router-dom"
 
 const ToDo = (props) => {
     const [toDo, setToDo] = useState({});
@@ -18,12 +19,13 @@ const ToDo = (props) => {
     return(
         <article>
             <h4>{toDo.task}</h4>
-            <Link to="/add-to-do">
-                <button>create a to do</button>
-                
-            </Link>
+
             <button onClick={handelDelete}>X</button>
+            <Link to={`/edit-to-do/${ID}`}>
+                <button>edit</button>
+            </Link>
         </article>
+        
     )
 }
 export default ToDo;
