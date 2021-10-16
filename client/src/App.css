@@ -48,10 +48,13 @@
   --font-color--:#000000;
 }
 
+
+
 nav {
   display: flex;
   justify-content: space-between;
   text-decoration: none;
+  
 }
 
 .landing-header{

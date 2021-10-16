@@ -27,8 +27,8 @@ const Nav = ({ user }) => {
     }
 
   return (
-    <nav>
-      {user ? (
+    <nav className="navbar">
+      { user ? (
         <>
           <Link to="/home" className="navItem">
             Home{" "}
