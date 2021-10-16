@@ -95,19 +95,22 @@ export const createPlannerEntry = async (newPlannerEntry) => {
     }
 }
 
-export const updatePlannerEntry = async (id) => {
+export const updatePlannerEntry = async (id, planner) => {
     try {
-        const token = localStorage.getItem("token");
-        if (token) {
-            const config = buildHeaders(token);
-            const response = await axios.put(`${apiURL}/api/planner-entries/${id}`, config);
-            return response.data;
-        }
-        return[];
+      const token = localStorage.getItem("token");
+      if (token) {
+        const config = buildHeaders(token);
+        const response = await axios.put(
+          `${apiURL}/api/planner-entries/${id}`,
+          planner,
+          config
+        );
+        return response.data;
+      }
     } catch (error) {
-        console.error(error.message);
+      console.error(error.message);
     }
-}
+  };
 
 export const destoryPlannerEntry = async (id) => {
     try {

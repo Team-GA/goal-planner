@@ -22,6 +22,8 @@ function App() {
   const location = useLocation();
   const [journalEntries, setJournalEntries] = useState([]);
   const [toggleFetch, setToggleFetch] = useState(false);
+  const [tasks, setTasks] = useState({});
+  const [plannerEntries, setPlannerEntries] = useState({});
   // journal props for edit
   useEffect(() => {
     getAllJournals().then((gotJournals) => setJournalEntries(gotJournals));
