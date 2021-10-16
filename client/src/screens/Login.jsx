@@ -20,7 +20,7 @@ const Login = (props) => {
   const history = useHistory();
 
   function successLogin() {
-    alert("You are Logged in!!!")
+    alert("You have Logged in!!!")
     history.push("/home")
   }
 
@@ -44,9 +44,8 @@ const Login = (props) => {
         failedLogin();
       }
       // history.push("/home");
-      if((userInfo === user) && (userInfo === user)) {
-
-      }
+      // if((userInfo === user) && (userInfo === user)) {
+      // }
     } catch (error) {
       console.error(error.message);
     }

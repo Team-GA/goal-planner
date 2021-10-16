@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import PlannerEntry from "../components/PlannerEntry";
 import Calendar from '../components/Calendar.jsx';
 import { getAllPlannerEntries } from "../services/index";
+import './Home.css'
 
 const Home = () => {
     const [allPlannerEntries, setPlannerEntries] = useState([]);
