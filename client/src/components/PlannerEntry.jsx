@@ -1,5 +1,6 @@
 import { destoryPlannerEntry, getPlannerEntryById } from "../services";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const PlannerEntry = (props) => {
   const [entry, setEntry] = useState({});
@@ -26,6 +27,9 @@ const PlannerEntry = (props) => {
       <button className="deleteButton" onClick={handleDelete}>
         Delete
       </button>
+      <Link to={`/edit-planner/${props.plannerEntry._id}`}>
+                <button>Edit</button>
+        </Link>
     </article>
   );
 };
