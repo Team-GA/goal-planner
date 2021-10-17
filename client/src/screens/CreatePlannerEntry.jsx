@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import { createPlannerEntry, updatePlannerEntry } from "../services";
+import './CreatePlannerEntry.css'
 
 const CreatePlannerEntry = (props) => {
     const [plannerDate, setPlannerDate] = useState("");
@@ -39,6 +40,7 @@ const CreatePlannerEntry = (props) => {
 
     return (
         <section>
+          <div className="add-container">
             <h3>Add a new entry:</h3>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="start">Date:</label>
@@ -47,6 +49,7 @@ const CreatePlannerEntry = (props) => {
                 <input id="plannerInput" type="text" value={plannerInput} onChange={(e) => setPlannerInput(e.target.value)} />
                 <button type="submit">Submit!</button>
             </form>
+            </div>
         </section>
     )
 }
