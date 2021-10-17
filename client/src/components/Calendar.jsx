@@ -25,7 +25,10 @@ const MyCalendar = props => {
                 localizer={localizer}
                 events={ myEventsList}
                 view='week'
-                
+                views={{
+                    week: true,
+                  }}
+                  step={30}
                 startAccessor="start"
                 endAccessor="end"
                 style={{ height: 500 }}
