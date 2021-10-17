@@ -1,13 +1,14 @@
 .root {
     --background--:#e8e8e4;
     --form--:#ffffff;
-    --primary--:#a8dadc;
-    --secondary--:#fb8500;
-    --user-color--:#52b788;
+    --accent--:#a8dadc;
+    --accent--:#fb8500;
+    --icon-color--:#52b788;
     --alert-button--:#e63946;
     --submitbutton--:#4895ef;
-    --font-color--:#000000;
-}
+    --Header-color--:#000000;
+    --text-color--:#343a40;
+  }
 
 /* body{
     background-color: #e8e8e4;
