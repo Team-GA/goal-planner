@@ -1,61 +1,35 @@
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 .root {
   --background--:#e8e8e4;
   --form--:#ffffff;
-  --primary--:#a8dadc;
-  --secondary--:#fb8500;
-  --user-color--:#52b788;
+  --accent--:#a8dadc;
+  --accent--:#fb8500;
+  --icon-color--:#52b788;
   --alert-button--:#e63946;
   --submitbutton--:#4895ef;
-  --font-color--:#000000;
+  --Header-color--:#000000;
+  --text-color--:#343a40;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 
-
-nav {
+/* nav {
   display: flex;
   justify-content: space-between;
   text-decoration: none;
   
-}
+} */
 
 .landing-header{
   background: #a8dadc;
@@ -67,35 +41,36 @@ nav {
   background-color: #4895ef;
   color: #ffffff;
   border: none;
-  padding: 8px;
+  padding: 8px 25px;
   margin: 5px;
-  border-radius: 10px;
-  width: 100px;
-  height: 35px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s ;
 }
 
 #landing-btn:hover {
   background-color: #fb8500;
   color: #000000;
   border: none;
-  padding: 8px;
+  padding: 8px 25px;
   margin: 5px;
-  border-radius: 10px;
-  width: 105px;
-  height: 39px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s ;
 }
 
-.home-header {
-
-}
 
 #logout-btn {
     background-color: #e63946;
     color: #ffffff;
     border: none;
-    padding: 8px;
+    padding: 8px 25px;
     margin: 5px;
-    border-radius: 10px;
-    width: 100px;
-    height: 35px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s ;
+}
+
+#logout-btn:hover {
+  background-color: #a4133c;
 }
