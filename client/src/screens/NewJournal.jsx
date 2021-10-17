@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import { createJournal, updateJournal } from "../services/journal.js";
+import './NewJournal.css'
 
 const NewJournal = (props) => {
   const [journalDate, setJournalDate] = useState("");
@@ -45,8 +46,9 @@ const NewJournal = (props) => {
 
   return (
     <section>
+      <div className="journal-container">
       <h4>Add a Journal Entry!</h4>
-      <form onSubmit={handleSubmit}>
+      <form className="journal-entry" onSubmit={handleSubmit}>
         <label htmlFor="journalDate">Date:</label>
         <input
           id="journalDate"
@@ -55,14 +57,19 @@ const NewJournal = (props) => {
           onChange={(e) => setJournalDate(e.target.value)}
         />
         <label htmlFor="journalInput">Entry:</label>
-        <input
+        <textarea
           id="journalInput"
-          type="text"
+          type="text" 
+          required
+          tabIndex="3"
+          cols="40"
+          rows="10"
           value={journalInput}
           onChange={(e) => setJournalInput(e.target.value)}
         />
-        <button type="submit">Submit!</button>
+        <button id="journal-button" type="submit">Submit!</button>
       </form>
+      </div>
     </section>
   );
 };
