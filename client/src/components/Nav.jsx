@@ -12,13 +12,10 @@ import AddIcon from "@mui/icons-material/Add";
 import HomeIcon from "@mui/icons-material/Home";
 import ChromeReaderModeIcon from "@mui/icons-material/ChromeReaderMode";
 import SettingsIcon from '@mui/icons-material/Settings';
-import { useState, useEffect } from "react";
+import { normalizeUnits } from "moment";
 
 const Nav = ({ user }) => {
   // const [ toggleFetch, setToggleFetch ] = useState(false);
-
-  const [menuActive, setMenuActive] = useState(false);
-  const [menuToggle, setMenuToggle] = useState(false);
   const history = useHistory();
 
   // useEffect(() => {
@@ -45,12 +42,20 @@ const Nav = ({ user }) => {
 
       {user ? (
         <>
-          <header>
-            <button className="hamburger">
-              <MenuIcon className="icon" />
-            </button>
 
-            <div className="mobile_nav">
+
+          <nav className="navbar">
+
+            <div className="user-div">
+          
+              <Link to="/home">
+              <AccountCircleIcon style={{color: "darkgray"}}/>
+                <h4 style={{color: "#023e8a"}}>{user.username}!</h4>
+              </Link>
+              </div>
+           
+
+            <div className="navbar-one">
               <ul className="nav_links">
                 <li>
                   <Link to="/home" className="navItem">
@@ -59,77 +64,32 @@ const Nav = ({ user }) => {
                 </li>
                 <li>
                   <Link to="/all-to-do" className="navItem">
-                    <h3>All To-Do List </h3>
+                    All To-Do List 
                   </Link>
                 </li>
                 <li>
                   <Link to="/add-to-planner" className="navItem">
-                    <h3>Add to Planner </h3>
+                    Add to Planner 
                   </Link>
                 </li>
                 <li>
                   <Link to="/new-journal" className="navItem">
-                    <h3>New Journal Entry</h3>
+                    New Journal Entry
                   </Link>
                 </li>
                 <li>
                   <Link to="/view-journal-entries" className="navItem">
-                    <h3>View Journal Entries</h3>
-                  </Link>
-                </li>
-                {/* <li>
-                  <h3>Notification</h3>
-                  <NotificationsIcon />
-                </li> */}
-              </ul>
-            </div>
-          </header>
-
-          <nav className="navbar">
-            <div className="navbar-one">
-              <ul className="nav_links">
-                <li>
-                  <Link to="/home" className="navItem">
-                    <HomeIcon className="icon" />{" "}
+                    View Journal Entries
                   </Link>
                 </li>
                 <li>
-                  <Link to="/all-to-do" className="navItem">
-                    <AddIcon className="icon" />
-                    {/* All To-Do List{" "} */}{" "}
-                  </Link>
+                  {/* <h3>Notification</h3> */}
                 </li>
-                <li>
-                  <Link to="/add-to-planner" className="navItem">
-                    <LibraryBooksIcon className="icon" />
-                    {/* Add to Planner{" "} */}
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/new-journal" className="navItem">
-                    <CreateIcon className="icon" />
-                    {/* New Journal Entry */}
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/view-journal-entries" className="navItem">
-                    <ChromeReaderModeIcon className="icon" />
-                    {/* View Journal Entries */}
-                  </Link>
-                </li>
-                {/* <li>
-                <NotificationsIcon />
-              </li> */}
               </ul>
             </div>
 
-            <div>
-              <Link to="/home">
-                <AccountCircleIcon className="icon" />
-                <br />
-                <span>Hi, {user.username}!</span>
-              </Link>
-            </div>
+
+
 
             <div className="navbar-two">
               <header className="home-header">
@@ -139,6 +99,46 @@ const Nav = ({ user }) => {
               </header>
             </div>
           </nav>
+
+
+          <header>
+            {/* <button className="hamburger">
+              <MenuIcon className="icon" />
+            </button> */}
+
+            <div className="mobile_nav">
+              <ul className="nav_links">
+                <li>
+                  <Link to="/home" className="navItem">
+                    <HomeIcon className="icon" />{" "}
+                  </Link>
+
+                  <Link to="/all-to-do" className="navItem">
+                    <AddIcon className="icon" />
+                    {/* All To-Do List{" "} */}{" "}
+                  </Link>
+
+
+                  <Link to="/add-to-planner" className="navItem">
+                    <LibraryBooksIcon className="icon" />
+                    {/* Add to Planner{" "} */}
+                  </Link>
+
+
+                  <Link to="/new-journal" className="navItem">
+                    <CreateIcon className="icon" />
+                    {/* New Journal Entry */}
+                  </Link>
+
+                  <Link to="/view-journal-entries" className="navItem">
+                    <ChromeReaderModeIcon className="icon" />
+                    {/* View Journal Entries */}
+                  </Link>
+              </li>
+              </ul>
+            </div>
+          </header>
+
         </>
       ) : (
         <>
