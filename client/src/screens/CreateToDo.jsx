@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import { createTask, updateTask } from "../services/toDoServices";
+import "../screens/ToDo.css"
 
 
 function CreateToDo(props) {
@@ -40,7 +41,7 @@ function CreateToDo(props) {
         <label htmlFor="task">task:</label>
         <input
           id="task"
-          className="to-do-input"
+          className="to-do-input edit"
           type="text"
           value={task}
           onChange={(e) => setTask(e.target.value)}
