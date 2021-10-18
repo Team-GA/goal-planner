@@ -3,7 +3,6 @@ import {useEffect, useState} from "react";
 import ToDo from './ToDo';
 import { getAllTasks } from "../services/toDoServices"
 import CreateToDo from '../screens/CreateToDo';
-import { RiCloseCircleLine } from 'react-icons/ri';
 
 function ToDoPage() {
     const [tasks, setTasks] = useState([]);
