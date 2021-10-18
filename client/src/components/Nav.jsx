@@ -90,7 +90,7 @@ const Nav = ({ user }) => {
             <div className="navbar-two">
               <header className="home-header">
                 <button id="logout-btn" onClick={logout}>
-                  logout
+                  Logout
                 </button>
               </header>
             </div>
@@ -141,10 +141,10 @@ const Nav = ({ user }) => {
           <nav className="navbar">
             <div className="button">
               <Link to="/login">
-                <button id="landing-btn">login</button>
+                <button id="landing-btn">Login</button>
               </Link>
               <Link to="/register">
-                <button id="landing-btn">register</button>
+                <button id="landing-btn">Register</button>
               </Link>
             </div>
           </nav>

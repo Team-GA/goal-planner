@@ -1,19 +1,16 @@
 import React from "react";
-import Nav from "../components/Nav";
+import './Landing.css';
 
 function Landing() {
   return (
-    <div>
-      <h2>Welcome to Passion Planner, this is the landing page</h2>
-      <div>
+    <div className="landing">
 
-      </div>
-      <div>
-
-      </div>
-      <div>
-        
-      </div>
+    <div className="landingTop">
+      <h1>Goal Planner</h1>
+    </div>
+    
+    <p className="landingDesc"> Goal planner is designed to organize your life and help you stay motivated! 
+    We have a planner feature, a built-in to-do list, and a journal for you to keep up with your thoughts.</p>
     </div>
   );
 }
