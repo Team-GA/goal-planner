@@ -21,13 +21,7 @@ const Home = () => {
             <h4>
                 <ToDoPage/>
             </h4>
-            <h3>Planner Entries</h3>
-
-            <div className="post">
-                {allPlannerEntries.map((plannerEntry) => (
-                    <PlannerEntry setToggleFetch={setToggleFetch} key={plannerEntry._id} plannerEntry={plannerEntry} />
-                ))}
-            </div>
+            <h3>Planner:</h3>
             <Calendar plannerEntries={allPlannerEntries}/>
 
         </section>
