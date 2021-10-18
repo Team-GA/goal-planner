@@ -27,7 +27,7 @@ function CreateToDo(props) {
         history.push("/all-to-do");
       } else {
         await createTask(taskEntry);
-        history.push("/all-to-do");
+        history.push("/home");
       }
     } catch (error) {
       console.error(error.message);
@@ -36,7 +36,7 @@ function CreateToDo(props) {
   return (
     <section>
       <h4>adding a task</h4>
-      <form onSubmit={handelSubmit}>
+      <form onSubmit={handelSubmit} className='todo-form'>
         <label htmlFor="task">task:</label>
         <input
           id="task"
@@ -45,7 +45,7 @@ function CreateToDo(props) {
           value={task}
           onChange={(e) => setTask(e.target.value)}
         ></input>
-        <button type="submit">Submit Task</button>
+        <button type="submit" className='todo-button'>Submit Task</button>
       </form>
     </section>
   );
