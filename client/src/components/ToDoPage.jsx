@@ -17,8 +17,8 @@ function ToDoPage() {
 
     return (
         <div>
-            <h4>To do list</h4>
             <CreateToDo/>
+            <h4>To do list</h4>
             <div>
                 {tasks.map((toDoTask)=>(
                     <ToDo setToggleFetch={setToggleFetch} key={toDoTask._id} task={toDoTask}/>
