@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { registerUser } from "../services";
 import { useHistory } from "react-router";
+import { Link } from 'react-router-dom';
+import HomeIcon from "@mui/icons-material/Home";
 import './Register.css'
 
 const Register = (props) => {
@@ -35,6 +37,11 @@ const Register = (props) => {
 
   return (
     <section className="signup-section">
+      <div className="main_page">
+        <Link to="/">
+          <HomeIcon className="icon" />{" "}
+        </Link>
+      </div>
       <h3>Register for an account!</h3>
       <div className="form-box">
       <form onSubmit={handleSubmit} className="signup-form">
