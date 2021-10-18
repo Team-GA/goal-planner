@@ -21,6 +21,7 @@
     color: #f8f9fa;
     margin: 5px;
     border-bottom: 1px solid #e5e5e5;
+    height: 50px;
   }
 
   .user-div{
@@ -52,7 +53,7 @@
 
  .nav_links li a{
   transition: all 0.3s ease 0s;
-  color: #4895ef;
+  color: #343a40;
  }
 
  .nav_links li a:hover{
@@ -89,6 +90,10 @@
 
   h3 {
     text-decoration: none;
+  }
+
+  h3:hover {
+    color: #fb8500;
   }
 
   .mobile_nav ul li{
@@ -130,6 +135,7 @@
   .navbar {
     padding: 0;
     display: flex;
+    height: 70px;
     justify-content: space-evenly;
   }
 
@@ -198,7 +204,7 @@
 
   }
 
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 550px) {
 
       .icon{
         /* color: #52b788; */
@@ -213,6 +219,7 @@
   .navbar {
     padding: 0;
     display: flex;
+    height: 70px;
     justify-content: space-evenly;
   }
 
@@ -279,3 +286,82 @@
         height: 39px;
       }
   }
+
+  @media screen and (max-width: 850px) {
+
+    .icon{
+      /* color: #52b788; */
+      color: #4895ef;
+      transition: all 0.3s ease 0s
+    }
+  
+    .icon:hover{
+      color: #fb8500;
+    }
+  
+.navbar {
+  padding: 0;
+  height: 70px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+  .nav_links li {
+    display: none;
+  }
+
+  .mobile_nav ul li {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navItem {
+    margin: 0;
+  }
+
+
+  .mobile_nav ul {
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  h3 {
+    color: #343a40;
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    /* max-width: 200px; */
+    margin: 0 auto;
+    text-align: center;
+    margin: 16px;
+    width: fit-content;
+    padding: 12px 16px;
+  }
+
+  h3:hover {
+    color: #fb8500;
+  }
+
+  #landing-btn {
+      background-color: #4895ef;
+      color: #ffffff;
+      border: none;
+      padding: 8px 25px;
+      margin: 5px;
+      border-radius: 10px;
+      width: 100px;
+      height: 35px;
+    }
+    
+    #landing-btn:hover {
+      background-color: #fb8500;
+      color: #000000;
+      border: none;
+      padding: 8px;
+      margin: 5px;
+      border-radius: 10px;
+      width: 105px;
+      height: 39px;
+    }
+}

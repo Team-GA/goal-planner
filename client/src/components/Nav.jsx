@@ -42,18 +42,14 @@ const Nav = ({ user }) => {
 
       {user ? (
         <>
-
-
           <nav className="navbar">
 
             <div className="user-div">
-          
               <Link to="/home">
-              <AccountCircleIcon style={{color: "darkgray"}}/>
-                <h4 style={{color: "#023e8a"}}>{user.username}!</h4>
+              <AccountCircleIcon style={{color: "darkgrey"}}/>
+                <h4 style={{color: "#4895ef"}}>{user.username}!</h4>
               </Link>
               </div>
-           
 
             <div className="navbar-one">
               <ul className="nav_links">
