@@ -12,6 +12,7 @@ import NewJournal from "./screens/NewJournal";
 import CreatePlannerEntry from "./screens/CreatePlannerEntry";
 import ToDoPage from "./components/ToDoPage";
 import CreateToDo from "./screens/CreateToDo";
+import EditDeletePlannerEntry from "./screens/EditDeletePlannerEntry";
 import { getAllJournals } from "./services/journal";
 import { getAllPlannerEntries } from "./services/index";
 import { getAllTasks } from "./services/toDoServices";
@@ -23,7 +24,7 @@ function App() {
   const [journalEntries, setJournalEntries] = useState([]);
   const [toggleFetch, setToggleFetch] = useState(false);
   const [tasks, setTasks] = useState({});
-  const [plannerEntries, setPlannerEntries] = useState({});
+  const [plannerEntries, setPlannerEntries] = useState([]);
   // journal props for edit
   useEffect(() => {
     getAllJournals().then((gotJournals) => setJournalEntries(gotJournals));
@@ -109,7 +110,7 @@ function App() {
 
         <Route path="/edit-planner/:id">
         <Nav user={user} />
-          <CreatePlannerEntry plannerEntries={plannerEntries}/>
+          <EditDeletePlannerEntry plannerEntries={plannerEntries}/>
         </Route>
         {/*Planner Components */}
 
