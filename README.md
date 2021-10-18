@@ -4,7 +4,7 @@
 ## Members
 -Kiana
 -Lynne
--Moty
+-Moty(Leader)
 -Herman
 
 ## Group Expectations
