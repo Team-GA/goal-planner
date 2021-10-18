@@ -37,6 +37,7 @@
   .todo-button:hover {
     background-color: #fb8500;
     color: black;
+    
   }
   .todo-container {
     display: flex;
@@ -55,8 +56,9 @@
       #a8dadc 100%
     );
     padding: 16px;
-    border-radius: 5px;
+    border-radius: 10px;
     width: 90%;
+    font-size:15px ;
   } 
   .icons {
     display: flex;
