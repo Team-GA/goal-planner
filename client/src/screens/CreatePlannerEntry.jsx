@@ -41,7 +41,7 @@ const CreatePlannerEntry = (props) => {
   return (
     <section>
       <div className="add-container">
-          <h3>Add a new date entry:</h3>
+          <h4>Add a New Date Entry:</h4>
         <form className="planner-entry" onSubmit={handleSubmit}>
           <label htmlFor="start">Date:</label>
           <input
