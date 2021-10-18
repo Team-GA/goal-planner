@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 // import { useState, useEffect } from "react"
 import { useHistory } from "react-router-dom";
 import "./Nav.css";
-import MenuIcon from "@mui/icons-material/Menu";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import TodayIcon from "@mui/icons-material/Today";
 import CreateIcon from "@mui/icons-material/Create";
@@ -38,12 +37,10 @@ const Nav = ({ user }) => {
 
   return (
     <div>
-      <header></header>
 
       {user ? (
         <>
           <nav className="navbar">
-
             <div className="user-div">
               <Link to="/home">
               <AccountCircleIcon style={{color: "darkgrey"}}/>
@@ -83,9 +80,6 @@ const Nav = ({ user }) => {
                 </li>
               </ul>
             </div>
-
-
-
 
             <div className="navbar-two">
               <header className="home-header">
