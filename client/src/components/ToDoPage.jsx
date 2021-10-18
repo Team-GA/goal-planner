@@ -2,8 +2,8 @@ import React from 'react'
 import {useEffect, useState} from "react";
 import ToDo from './ToDo';
 import { getAllTasks } from "../services/toDoServices"
-import {Link} from "react-router-dom"
 import CreateToDo from '../screens/CreateToDo';
+import { RiCloseCircleLine } from 'react-icons/ri';
 
 function ToDoPage() {
     const [tasks, setTasks] = useState([]);
@@ -17,12 +17,14 @@ function ToDoPage() {
 
     return (
         <div>
+            <div className="todo">
             <CreateToDo/>
             <h4>To do list</h4>
-            <div>
+            <div >
                 {tasks.map((toDoTask)=>(
-                    <ToDo setToggleFetch={setToggleFetch} key={toDoTask._id} task={toDoTask}/>
+                    <ToDo  setToggleFetch={setToggleFetch} key={toDoTask._id} task={toDoTask}/>
                 ))}
+            </div>
             </div>    
         </div>
     )

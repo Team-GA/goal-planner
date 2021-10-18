@@ -51,9 +51,12 @@ const NewJournal = (props) => {
       <form className="journal-entry" onSubmit={handleSubmit}>
         <label htmlFor="journalDate">Date:</label>
         <input
-          id="journalDate"
-          type="text"
+          type="datetime-local"
+          id="start"
+          name="trip-start"
           value={journalDate}
+          min="2015-01-01"
+          max="2030-01-01"
           onChange={(e) => setJournalDate(e.target.value)}
         />
         <label htmlFor="journalInput">Entry:</label>
