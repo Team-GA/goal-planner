@@ -22,7 +22,7 @@ const PlannerEntry = (props) => {
     <article className="entry">
       <section className="date">{entry.plannerDate}</section>
       <section className="text-entry">
-        <h5>{entry.plannerInput}</h5>
+        <h4>{entry.plannerInput}</h4>
       </section>
       <button className="deleteButton" onClick={handleDelete}>
         Delete

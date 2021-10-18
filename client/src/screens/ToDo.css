@@ -1,12 +1,13 @@
 .todo {
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    width: 520px;
+    justify-content: center;
+    width: 600px;
     min-height: 600px;
+    background-color: white;
     /* background: #e8e8e4; */
     text-align: center;
-    margin: 50px auto;
+    margin: 0px auto;
     border: 1px solid #e5e5e5;
     border-radius: 10px;
     padding-bottom: 30px;
@@ -49,14 +50,10 @@
     justify-content: space-between;
     align-items: center;
     margin: 4px auto;
-    color: #fff;
-    background: linear-gradient(
-      90deg,
-      #52b788 75%,
-      #a8dadc 100%
-    );
+    color: black;
     padding: 16px;
     border-radius: 10px;
+    border: 1px solid #e5e5e5;
     width: 90%;
     font-size:15px ;
   } 
