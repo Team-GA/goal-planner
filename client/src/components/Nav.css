@@ -38,7 +38,8 @@
     text-decoration: none;
     color: #f8f9fa;
     color: red;
-    font-family: "Montserrat", sans-serif;
+    /* font-family: "Montserrat", sans-serif; */
+    /* font-family: 'Lato', sans-serif; */
   }
 
  .nav_links {
@@ -75,19 +76,6 @@
     text-decoration: none;
   }
 
-  .hamburger {
-    display: block;
-    width: 35px;
-    cursor: pointer;
-    height: 35px;
-    appearance: none;
-    background: none;
-    outline: none;
-    border: none;
-    position: relative;
-  }
-
-
   h3 {
     text-decoration: none;
   }
@@ -99,7 +87,11 @@
   .mobile_nav ul li{
     display: none;
   }
-
+@media screen and (max-width: 1080px) {
+  .nav_links li a{
+    font-size: 12px;
+  }
+}
   @media screen and (max-width: 360px) {
 
     /* nav {

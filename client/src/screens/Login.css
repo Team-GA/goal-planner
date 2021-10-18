@@ -105,6 +105,11 @@ h3 {
     outline: none;
 }
 
+.main_page {
+    display: flex;
+    justify-content: center;
+}
+
 @media screen and (max-width: 550px) {
 
     .form-box {
