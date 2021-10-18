@@ -1,4 +1,9 @@
-.todo {
+.edit-to-do {
+
+}
+
+
+.edit-to-do  {
     display: flex;
     flex-direction: column;
     justify-content: center;

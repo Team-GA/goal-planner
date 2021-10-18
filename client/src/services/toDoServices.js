@@ -3,7 +3,7 @@ import axios from "axios";
 const apiUrl = 
 process.env.NODE_ENV === "development"
     ? "http://localhost:3001"
-    : null;
+    : "https://goal-planner-osos.herokuapp.com";
 
 const buildHeaders =(token)=>{
     return {

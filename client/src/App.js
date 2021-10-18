@@ -98,7 +98,7 @@ function App() {
 
         <Route path="/edit-to-do/:id">
           <Nav user={user} />
-          <CreateToDo tasks={tasks} />
+          <CreateToDo tasks={tasks} className="edit-to-do"/>
         </Route>
         {/*To-Do Components */}
 
