@@ -1,4 +1,5 @@
 import axios from 'axios';
+// import { useHistory } from 'react-router';
 
 const apiURL =
   process.env.NODE_ENV === "development"
@@ -27,6 +28,9 @@ export const loginUser = async (userInfo) => {
         console.error(error.message);
     }
 }
+
+
+
 
 const buildHeaders = (token) => {
     return {
@@ -64,6 +68,19 @@ export const getAllPlannerEntries = async () => {
     }
 }
 
+export const getPlannerEntryById = async (id) => {
+    try {
+        const token = localStorage.getItem("token");
+        if (token) {
+            const config = buildHeaders(token);
+            const response = await axios.get(`${apiURL}/api/planner-entries/${id}`, config);
+            return response.data;
+        }
+    } catch (error) {
+        console.error(error.message);
+    }
+}
+
 
 export const createPlannerEntry = async (newPlannerEntry) => {
     try {
@@ -78,19 +95,22 @@ export const createPlannerEntry = async (newPlannerEntry) => {
     }
 }
 
-export const updatePlannerEntry = async (id) => {
+export const updatePlannerEntry = async (id, planner) => {
     try {
-        const token = localStorage.getItem("token");
-        if (token) {
-            const config = buildHeaders(token);
-            const response = await axios.put(`${apiURL}/api/planner-entries/${id}`, config);
-            return response.data;
-        }
-        return[];
+      const token = localStorage.getItem("token");
+      if (token) {
+        const config = buildHeaders(token);
+        const response = await axios.put(
+          `${apiURL}/api/planner-entries/${id}`,
+          planner,
+          config
+        );
+        return response.data;
+      }
     } catch (error) {
-        console.error(error.message);
+      console.error(error.message);
     }
-}
+  };
 
 export const destoryPlannerEntry = async (id) => {
     try {

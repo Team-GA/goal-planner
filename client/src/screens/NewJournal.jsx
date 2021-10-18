@@ -1,44 +1,80 @@
-import { useState } from "react";
-import { useHistory } from "react-router-dom";
-import { createJournal } from "../services/journal.js";
+import { useEffect, useState } from "react";
+import { useHistory, useParams } from "react-router-dom";
+import { createJournal, updateJournal } from "../services/journal.js";
+import './NewJournal.css'
 
-const NewJournal = () => {
-    // 1. it should have labels, inputs, and states corresponding to what a new book should look like (title, author, yearPublished)
-    const [journalDate, setJournalDate] = useState("");
-    const [journalInput, setJournalInput] = useState("");
-    const history = useHistory();
+const NewJournal = (props) => {
+  const [journalDate, setJournalDate] = useState("");
+  const [journalInput, setJournalInput] = useState("");
+  const history = useHistory();
+  const params = useParams();
 
-    // 2. when the form on this component is submitted, we'd like to call our createBook function and pass our newBook as an argument. if it's successful, we'll bring the user back to the main page
-
-    const handleSubmit = async (e) => {
-        try {
-            e.preventDefault();
-            // make the book object
-            const journal = {
-                journalDate,
-                journalInput
-            }
-            // call createBook with book as an argument
-            await createJournal(journal);
-            // push the user to the home page
-            history.push("/view-journal-entries");
-        } catch (error) {
-            console.error(error.message);
-        }
+  useEffect(() => {
+    if (params.id) {
+      const journal = props.journalEntries.find(
+        (journal) => journal._id === params.id
+      );
+      if (journal) {
+        setJournalDate(journal.journalDate);
+        setJournalInput(journal.journalInput);
+      }
     }
+  }, [params.id, props.journalEntries]);
 
-    return (
-        <section>
-            <h4>Add a Journal Entry!</h4>
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="journalDate">Date:</label>
-                <input id="journalDate" type="text" value={journalDate} onChange={(e) => setJournalDate(e.target.value)} />
-                <label htmlFor="journalInput">Entry:</label>
-                <input id="journalInput" type="text" value={journalInput} onChange={(e) => setJournalInput(e.target.value)} />
-                <button type="submit">Submit!</button>
-            </form>
-        </section>
-    );
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      e.preventDefault();
+
+      const journal = {
+        journalDate,
+        journalInput,
+      };
+      if (params.id) {
+        await updateJournal(params.id, journal);
+        history.push("/view-journal-entries");
+      } else {
+        await createJournal(journal);
+        history.push("/view-journal-entries");
+      }
+      props.setToggleFetch((curr) => !curr);
+      history.push("/view-journal-entries");
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
+
+  return (
+    <section>
+      <div className="journal-container">
+      <h4>Add a Journal Entry!</h4>
+      <form className="journal-entry" onSubmit={handleSubmit}>
+        <label htmlFor="journalDate">Date:</label>
+        <input
+          type="datetime-local"
+          id="start"
+          name="trip-start"
+          value={journalDate}
+          min="2015-01-01"
+          max="2030-01-01"
+          onChange={(e) => setJournalDate(e.target.value)}
+        />
+        <label htmlFor="journalInput">Entry:</label>
+        <textarea
+          id="journalInput"
+          type="text" 
+          required
+          tabIndex="3"
+          cols="40"
+          rows="10"
+          value={journalInput}
+          onChange={(e) => setJournalInput(e.target.value)}
+        />
+        <button id="journal-button" type="submit">Submit!</button>
+      </form>
+      </div>
+    </section>
+  );
 };
 
 export default NewJournal;

@@ -22,6 +22,7 @@ export const getAllJournals = async () => {
             const response = await axios.get(`${apiURL}/api/journals`, config);
             return response.data;
         }
+        return [];
     } catch (error) {
         console.error(error.message);
     }
@@ -39,3 +40,44 @@ export const createJournal = async (newJournal) => {
       console.error(error.message);
     }
   }
+
+
+
+export const getJournalbyId = async (id) => {
+    try {
+        const token = localStorage.getItem("token");
+        if(token){
+            const config = buildHeaders(token);
+            const response = await axios.get(`${apiURL}/api/journal/${id}`, config)
+            return response.data;
+        }
+    } catch (error) {
+        console.error(error.message);
+    }
+}
+
+export const deleteJournal = async (id) => {
+    try {
+        const token = localStorage.getItem("token");
+        if(token){
+            const config = buildHeaders(token);
+            const response = await axios.delete(`${apiURL}/api/journal/${id}`, config)
+            return response.data;
+        }
+    } catch (error) {
+        console.error(error.message);
+    }
+}
+
+export const updateJournal = async (id, journal) => {
+    try {
+        const token = localStorage.getItem("token");
+        if(token){
+            const config = buildHeaders(token);
+            const response = await axios.put(`${apiURL}/api/journal/${id}`,journal,  config)
+            return response.data;
+        }
+    } catch (error) {
+        console.error(error.message);
+    }
+}

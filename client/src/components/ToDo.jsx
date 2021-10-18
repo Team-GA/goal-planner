@@ -1,16 +1,37 @@
+
+import { deleteTask, getTaskbyId } from "../services/toDoServices";
+import { useEffect, useState } from "react";
 import {Link} from "react-router-dom"
+import { RiCloseCircleLine } from 'react-icons/ri';
+import { TiEdit } from 'react-icons/ti';
+import "../screens/ToDo.css"
 
 const ToDo = (props) => {
-    const { task } = props;
-    // console.log(task)
+    const [toDo, setToDo] = useState({});
+    const ID = props.task._id;
+
+    useEffect(() => {
+        getTaskbyId(ID).then((gotToDo) => setToDo(gotToDo))
+    }, [ID]);
+
+    const handelDelete = async () => {
+        await deleteTask(ID)
+        props.setToggleFetch((curr) => !curr); 
+    }
 
     return(
-        <article>
-            <h4>{task.task}</h4>
-            <Link to="/add-to-do">
-                <button>create a to do</button>
+        <article className='icons' >
+            <div className="todo-row">
+            <h4>{toDo.task}</h4>
+            <div className="buttons">
+            <RiCloseCircleLine className='delete-icon' onClick={handelDelete}/>
+            <Link to={`/edit-to-do/${ID}`}>
+                <TiEdit className='edit-icon'/>
             </Link>
+            </div>
+            </div>
         </article>
+        
     )
 }
 export default ToDo;

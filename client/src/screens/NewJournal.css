@@ -1,0 +1,30 @@
+.journal-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid #e5e5e5;
+    width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 100px;
+}
+
+.journal-entry {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;    
+}
+
+#journal-button {
+    color: white;
+    background-color: #52b788;
+    border: none;
+    border: 10px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.9);
+}
+
+#journal-button:hover {
+    background-color: #fb8500;
+    color: black;
+}

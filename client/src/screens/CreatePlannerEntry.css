@@ -1,0 +1,44 @@
+.add-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid #e5e5e5;
+    width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 100px;
+}
+
+.planner-entry {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;    
+}
+
+#planner-button {
+    color: white;
+    background-color: #52b788;
+    border: none;
+    border: 10px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.9);
+}
+
+#planner-button:hover {
+    background-color: #fb8500;
+    color: black;
+}
+
+
+
+.root {
+    --background--:#e8e8e4;
+    --form--:#ffffff;
+    --accent--:#a8dadc;
+    --accent--:#fb8500;
+    --icon-color--:#52b788;
+    --alert-button--:#e63946;
+    --submitbutton--:#4895ef;
+    --Header-color--:#000000;
+    --text-color--:#343a40;
+  }

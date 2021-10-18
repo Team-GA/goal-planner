@@ -2,18 +2,27 @@ import React from 'react'
 import {useEffect, useState} from "react";
 import ToDo from './ToDo';
 import { getAllTasks } from "../services/toDoServices"
+import CreateToDo from '../screens/CreateToDo';
+
 function ToDoPage() {
     const [tasks, setTasks] = useState([]);
-    useEffect(()=>{
-        getAllTasks().then(((gotTheTasks) => setTasks(gotTheTasks)))
-    },[]);
+    const [ toggleFetch, setToggleFetch ] = useState(false)
+
+    useEffect(() => {
+        getAllTasks().then((gotTheTasks) => setTasks(gotTheTasks));
+
+    },[toggleFetch]);
+
+
     return (
         <div>
-            <h4>To do list</h4>
-            <div>
-                {tasks.map((task)=>(
-                    <ToDo key={task._id} task={task}/>
+            <div className="todo">
+            <CreateToDo/>
+            <div >
+                {tasks.map((toDoTask)=>(
+                    <ToDo  setToggleFetch={setToggleFetch} key={toDoTask._id} task={toDoTask}/>
                 ))}
+            </div>
             </div>    
         </div>
     )

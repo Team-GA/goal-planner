@@ -1,0 +1,21 @@
+.landingTop {
+    text-align: center;
+    font-size: 70px;
+    background-image: url("https://images.pexels.com/photos/434337/pexels-photo-434337.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    height: 100%;
+    padding-top: 250px;
+    padding-bottom: 250px;
+    background-position: top 30% right 0px;
+    background-repeat: no-repeat;
+    font-family: 'League Script', cursive;
+  }
+
+.landingDesc {
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Lato', sans-serif;
+    background-color: #a8dadc;
+    margin: 0 auto;
+    padding: 100px 100px 100px 100px;
+  
+}
