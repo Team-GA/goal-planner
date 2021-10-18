@@ -74,3 +74,46 @@
 #logout-btn:hover {
   background-color: #a4133c;
 }
+
+.todo {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 520px;
+  min-height: 600px;
+  background: #e8e8e4;
+  text-align: center;
+  margin: 50px auto;
+  border-radius: 10px;
+  padding-bottom: 30px;
+}
+
+.to-do-input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #343a40;
+  outline: none;
+  width: 300px;
+  background: transparent;
+  color: #fff;
+}
+.todo-form {
+  margin-bottom: 30px;
+}
+.todo-button {
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background:#52b788
+}
+.todo-button:hover {
+  background-color: #fb8500;
+  color: black;
+}
+.todo-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}

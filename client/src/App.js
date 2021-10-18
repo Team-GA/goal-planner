@@ -89,16 +89,20 @@ function App() {
           <Nav user={user} />
           <CreateToDo />
         </Route>
-
+        
         <Route exact path="/all-to-do">
           <Nav user={user} />
+          <div className="todo">
           <ToDoPage />
+          </div>
         </Route>
-
+        
+        
         <Route path="/edit-to-do/:id">
           <Nav user={user} />
           <CreateToDo tasks={tasks} />
         </Route>
+       
         {/*To-Do Components */}
 
         {/*Planner Components */}
