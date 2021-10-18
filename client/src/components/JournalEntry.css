@@ -120,7 +120,7 @@
     
   }
 
-  p {
+  .paragraph {
     transform: scaleX(-1);
     font-family: Impact, Charcoal, sans-serif;
     font-size: larger;

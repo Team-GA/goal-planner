@@ -37,7 +37,7 @@ const JournalEntry = (props) => {
           <div classn="page5"></div>
           <div className="page4"></div>
           <div className="page3">
-            <p>{String(journal.journalDate).split("T")[0]}</p>
+            <p className="paragraph">{String(journal.journalDate).split("T")[0]}</p>
           </div>
           <div className="page2"></div>
           <div className="page1"></div>
