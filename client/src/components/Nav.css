@@ -277,6 +277,17 @@
         width: 105px;
         height: 39px;
       }
+
+
+    span {
+      display: grid;
+      justify-content: center;
+      margin: 15px;
+    }
+
+    span a {
+      margin: -5px;
+    }
   }
 
   @media screen and (max-width: 850px) {
@@ -355,5 +366,15 @@
       border-radius: 10px;
       width: 105px;
       height: 39px;
+    }
+
+    span {
+      display: grid;
+      justify-content: center;
+      margin: 15px;
+    }
+
+    span a {
+      margin: -5px;
     }
 }
