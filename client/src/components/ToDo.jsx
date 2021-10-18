@@ -20,13 +20,16 @@ const ToDo = (props) => {
     }
 
     return(
-        <article className='icons' className="todo-row">
+        <article className='icons' >
+            <div className="todo-row">
             <h4>{toDo.task}</h4>
-
+            <div className="buttons">
             <RiCloseCircleLine className='delete-icon' onClick={handelDelete}/>
             <Link to={`/edit-to-do/${ID}`}>
                 <TiEdit className='edit-icon'/>
             </Link>
+            </div>
+            </div>
         </article>
         
     )

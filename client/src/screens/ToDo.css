@@ -43,6 +43,21 @@
     flex-direction: row;
     position: relative;
   }
+  .todo-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4px auto;
+    color: #fff;
+    background: linear-gradient(
+      90deg,
+      #52b788 75%,
+      #a8dadc 100%
+    );
+    padding: 16px;
+    border-radius: 5px;
+    width: 90%;
+  } 
   .icons {
     display: flex;
     align-items: center;
@@ -56,18 +71,3 @@
     margin-right: 5px;
     color: #e63946;
   }
-  .todo-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 4px auto;
-    color: #fff;
-    background: linear-gradient(
-      90deg,
-      #52b788 50%,
-      #a8dadc 100%
-    );
-    padding: 16px;
-    border-radius: 5px;
-    width: 90%;
-  } 
