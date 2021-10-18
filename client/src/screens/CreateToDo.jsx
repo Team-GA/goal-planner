@@ -36,9 +36,10 @@ function CreateToDo(props) {
   };
   return (
     <section>
-      <h4>adding a task</h4>
+      <div className="add">
+      <h4>Adding a new To Do:</h4>
       <form onSubmit={handelSubmit} className='todo-form'>
-        <label htmlFor="task">task:</label>
+        <label htmlFor="task">Task:</label>
         <input
           id="task"
           className="to-do-input edit"
@@ -48,6 +49,7 @@ function CreateToDo(props) {
         ></input>
         <button type="submit" className='todo-button'>Submit Task</button>
       </form>
+      </div>
     </section>
   );
 }
