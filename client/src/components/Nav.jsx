@@ -44,7 +44,7 @@ const Nav = ({ user }) => {
             <div className="user-div">
               <Link to="/home">
               <AccountCircleIcon style={{color: "darkgrey"}}/>
-                <h4 style={{color: "#4895ef"}}>{user.username}!</h4>
+                <h4 style={{color: "#4895ef"}}>Welcome {user.username}!</h4>
               </Link>
               </div>
 

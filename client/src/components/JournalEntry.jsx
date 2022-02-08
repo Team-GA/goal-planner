@@ -20,30 +20,16 @@ const JournalEntry = (props) => {
   };
 
   return (
-    <div class="all">
-      <div class="books">
-        <div class="book">
-          <div className="back"></div>
-          <div className="page6">
-              <h5>My journal</h5>
-            <h6>{journal.journalInput}</h6>
-            <div className="journalButtons">
-              <RiCloseCircleLine className='delete-icon' onClick={handleDelete}/>
-              <Link to={`/edit-journal/${props.journalEntry._id}`}>
-                <TiEdit className='edit-icon'/>
-              </Link>
-            </div>
-          </div>
-          <div classn="page5"></div>
-          <div className="page4"></div>
-          <div className="page3">
-            <p className="paragraph">{String(journal.journalDate).split("T")[0]}</p>
-          </div>
-          <div className="page2"></div>
-          <div className="page1"></div>
-          <div className="front"></div>
-        </div>
+    <div className = "journal-entry">
+      <h5 className="date">Entry date: {String(journal.journalDate).split("T")[0]}</h5>
+      <h6>{journal.journalInput}</h6>
+      <div className="journalButtons">
+        <RiCloseCircleLine className='delete-icon' onClick={handleDelete}/>
+        <Link to={`/edit-journal/${props.journalEntry._id}`}>
+        <TiEdit className='edit-icon'/>
+        </Link>
       </div>
+      
     </div>
   );
 };
