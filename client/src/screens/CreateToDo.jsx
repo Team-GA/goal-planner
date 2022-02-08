@@ -17,7 +17,7 @@ function CreateToDo(props) {
     }
   }, [params.id, props.tasks]);
 
-  const handelSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     try {
       e.preventDefault();
       const taskEntry = {
@@ -29,6 +29,7 @@ function CreateToDo(props) {
       } else {
         await createTask(taskEntry);
         history.push("/home");
+        props.setToggleFetch((curr) => !curr); 
       }
     } catch (error) {
       console.error(error.message);
@@ -37,9 +38,9 @@ function CreateToDo(props) {
   return (
     <section>
       <div className="add">
-      <h4>Adding a new To Do:</h4>
-      <form onSubmit={handelSubmit} className='todo-form'>
-        <label htmlFor="task">Task:</label>
+      <h4>To do list:</h4>
+      <form onSubmit={handleSubmit} className='todo-form'>
+        <label htmlFor="task">Add task: </label>
         <input
           id="task"
           className="to-do-input edit"
