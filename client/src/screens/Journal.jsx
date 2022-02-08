@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import JournalEntry from "../components/JournalEntry";
-import './Journal.css';
+import './journal.css';
 import { getAllJournals } from "../services/journal.js";
 
 const Journal = () => {
