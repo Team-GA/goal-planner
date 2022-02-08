@@ -22,7 +22,9 @@ const Home = () => {
                 <ToDoPage/>
             </h4>
             <h3>Planner:</h3>
+            <div id="calendar-section">
             <Calendar plannerEntries={allPlannerEntries}/>
+            </div>
 
         </section>
     )

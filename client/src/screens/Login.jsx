@@ -20,7 +20,7 @@ const Login = (props) => {
   }
 
   function failedLogin() {
-    alert("wrong username & password combination");
+    alert("Wrong username and password combination.");
     history.push("/Login");
   }
 
@@ -54,14 +54,14 @@ const Login = (props) => {
         </Link>
       </div>
 
-      <h3>login to your account!</h3>
+      <h3 id= "login-title">Login to your account!</h3>
       <div className="form-box">
         <form className="login-form" onSubmit={handleSubmit} required>
           <label htmlFor="username">Username: </label>
           <input
             className="form-control"
             id="username"
-            placeholder="username"
+            placeholder=" Username"
             type="text"
             required
             value={username}
@@ -71,7 +71,7 @@ const Login = (props) => {
           <label htmlFor="password">Password:</label>
           <input
             className="form-control"
-            placeholder="password"
+            placeholder=" Password"
             id="password"
             type="password"
             required
@@ -79,11 +79,11 @@ const Login = (props) => {
             onChange={(e) => setPassword(e.target.value)}
           />
           <button className="login-btn" type="submit" alert="login successful">
-            login!
+            Login
           </button>
           <br />
           <span>
-            You dont have an account? <Link to="/Register">Register now!</Link>
+            Don't have an account? <Link to="/Register">Register now!</Link>
           </span>
         </form>
       </div>
