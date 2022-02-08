@@ -13,7 +13,7 @@ import ChromeReaderModeIcon from "@mui/icons-material/ChromeReaderMode";
 import SettingsIcon from '@mui/icons-material/Settings';
 import { normalizeUnits } from "moment";
 
-const Nav = ({ user }) => {
+const Nav = ({ user, logout }) => {
   // const [ toggleFetch, setToggleFetch ] = useState(false);
   const history = useHistory();
 
@@ -24,12 +24,13 @@ const Nav = ({ user }) => {
   //     }
   // }, [input])
 
-  const logout = async (e, userInfo) => {
+  const logoutFunction = async (e, userInfo) => {
     e.preventDefault();
     try {
       localStorage.removeItem("token", userInfo);
       window.localStorage.clear();
       history.push("/Login");
+      logout(null);
     } catch (error) {
       console.error(error.message);
     }
@@ -83,7 +84,7 @@ const Nav = ({ user }) => {
 
             <div className="navbar-two">
               <header className="home-header">
-                <button id="logout-btn" onClick={logout}>
+                <button id="logout-btn" onClick={logoutFunction}>
                   Logout
                 </button>
               </header>

@@ -68,7 +68,7 @@ function App() {
       <Switch>
         {/* <main> */}
         <Route exact path="/">
-          <Nav user={user} />
+          <Nav user={user} logout={setUser} />
           <Landing />
         </Route>
 
@@ -81,47 +81,47 @@ function App() {
         </Route>
 
         <Route exact path="/home">
-        <Nav user={user} />
+        <Nav user={user} logout={setUser} />
           <Home setUser={setUser} />
         </Route>
 
         {/*To-Do Components */}
         <Route exact path="/add-to-do">
-          <Nav user={user} />
+          <Nav user={user} logout={setUser} />
           <CreateToDo />
         </Route>
 
         <Route exact path="/all-to-do">
-          <Nav user={user} />
+          <Nav user={user} logout={setUser}/>
           <ToDoPage />
         </Route>
 
         <Route path="/edit-to-do/:id">
-          <Nav user={user} />
+          <Nav user={user} logout={setUser}/>
           <CreateToDo tasks={tasks} className="edit-to-do"/>
         </Route>
         {/*To-Do Components */}
 
         {/*Planner Components */}
         <Route path="/add-to-planner">
-          <Nav user={user} />
+          <Nav user={user} logout={setUser}/>
           <CreatePlannerEntry />
         </Route>
 
         <Route path="/edit-planner/:id">
-        <Nav user={user} />
+        <Nav user={user} logout={setUser}/>
           <EditDeletePlannerEntry plannerEntries={plannerEntries}/>
         </Route>
         {/*Planner Components */}
 
         {/*Journal Components */}
         <Route path="/new-journal">
-          <Nav user={user} />
+          <Nav user={user} logout={setUser}/>
           <NewJournal />
         </Route>
 
         <Route path="/view-journal-entries">
-          <Nav user={user} />
+          <Nav user={user} logout={setUser}/>
           <Journal />
         </Route>
         <Route path="/edit-journal/:id">
