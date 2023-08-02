@@ -17,7 +17,7 @@ const Home = () => {
 
 
     return (
-        <section>
+        <section className='background'>
             <h4>
                 <ToDoPage/>
             </h4>

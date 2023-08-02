@@ -38,9 +38,9 @@ const Login = (props) => {
       } else {
         failedLogin();
       }
-      // history.push("/home");
-      // if((userInfo === user) && (userInfo === user)) {
-      // }
+      history.push("/home");
+      if((userInfo === user) && (userInfo === user)) {
+      }
     } catch (error) {
       console.error(error.message);
     }
@@ -50,7 +50,8 @@ const Login = (props) => {
     <section className="login-section">
       <div className="main_page">
         <Link to="/">
-          <HomeIcon className="icon" />{" "}
+          <HomeIcon className="icon" />
+          
         </Link>
       </div>
 

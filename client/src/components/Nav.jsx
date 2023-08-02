@@ -13,22 +13,15 @@ import ChromeReaderModeIcon from "@mui/icons-material/ChromeReaderMode";
 import SettingsIcon from '@mui/icons-material/Settings';
 import { normalizeUnits } from "moment";
 
-const Nav = ({ user }) => {
+const Nav = ({ user, }) => {
   // const [ toggleFetch, setToggleFetch ] = useState(false);
   const history = useHistory();
 
-  // useEffect(() => {
-  //     effect
-  //     return () => {
-  //         cleanup
-  //     }
-  // }, [input])
-
   const logout = async (e, userInfo) => {
-    e.preventDefault();
     try {
+      e.preventDefault();
       localStorage.removeItem("token", userInfo);
-      window.localStorage.clear();
+      localStorage.clear();
       history.push("/Login");
     } catch (error) {
       console.error(error.message);
@@ -41,7 +34,9 @@ const Nav = ({ user }) => {
       {user ? (
         <>
           <nav className="navbar">
+            
             <div className="user-div">
+
               <Link to="/home">
               <AccountCircleIcon style={{color: "darkgrey"}}/>
                 <h4 style={{color: "#4895ef"}}>{user.username}!</h4>
@@ -88,41 +83,34 @@ const Nav = ({ user }) => {
                 </button>
               </header>
             </div>
+        
           </nav>
 
 
           <header>
-            {/* <button className="hamburger">
-              <MenuIcon className="icon" />
-            </button> */}
-
             <div className="mobile_nav">
               <ul className="nav_links">
                 <li>
                   <Link to="/home" className="navItem">
-                    <HomeIcon className="icon" />{" "}
+                    <HomeIcon className="icon" />
                   </Link>
 
                   <Link to="/all-to-do" className="navItem">
                     <AddIcon className="icon" />
-                    {/* All To-Do List{" "} */}{" "}
                   </Link>
 
 
                   <Link to="/add-to-planner" className="navItem">
                     <LibraryBooksIcon className="icon" />
-                    {/* Add to Planner{" "} */}
                   </Link>
 
 
                   <Link to="/new-journal" className="navItem">
                     <CreateIcon className="icon" />
-                    {/* New Journal Entry */}
                   </Link>
 
                   <Link to="/view-journal-entries" className="navItem">
                     <ChromeReaderModeIcon className="icon" />
-                    {/* View Journal Entries */}
                   </Link>
               </li>
               </ul>
